@@ -28,6 +28,10 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     cell.textLabel.text = titleArray[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
+    CGRect labelRect = cell.textLabel.frame;
+    cell.textLabel.frame = CGRectMake(50, 0, labelRect.size.width, labelRect.size.height);
+    cell.textLabel.textColor = KBLUE;
     return cell;
 }
 - (void)didReceiveMemoryWarning {
