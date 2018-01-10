@@ -1,0 +1,64 @@
+//
+//  PrefixHeader.pch
+//  Beatles
+//
+//  Created by Zhou Chao on 2017/12/18.
+//  Copyright © 2017年 xiran. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#define MAS_SHORTHAND_GLOBALS
+/*ViewController*/
+#import "BaseSettingViewController.h"
+#import "BaseTabBarController.h"
+#import "JDStatusBarNotification.h"
+#import "LoginViewController.h"
+#import "MainViewController.h"
+#import "MarketViewController.h"
+#import "MineViewController.h"
+#import "TestViewController.h"
+#import "SettingViewController.h"
+#import "SettingLocalMapViewController.h"
+#import "MarketDetailViewController.h"
+/*View*/
+#import "SettingItemTextCollectionViewCell.h"
+#import "MainCollectionViewCell.h"
+#import "KitNameCollectionViewCell.h"
+#import "KitImageCollectionViewCell.h"
+#import "KitSettingCollectionReusableView.h"
+#import "MineHeaderTableViewCell.h"
+#import "MineSecondTableViewCell.h"
+#import "MineNormalTableViewCell.h"
+#import "MarketItemCollectionViewCell.h"
+#import "MarketDetailDescCollectionViewCell.h"
+#import "MarketKitCollectionViewCell.h"
+/*model*/
+#import "ConfigDataTool.h"
+#import "MyDeviceDao.h"
+#import "KitDeviceDao.h"
+/*library*/
+#import "Masonry.h"
+#import <CoreData/CoreData.h>
+/*macro*/
+#define BLUECOLOR [UIColor colorWithRed:72.0/255 green:156.0/255 blue:248.0/255 alpha:1]
+#define KBLUE [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1]
+#define KBROWN [UIColor colorWithRed:245/255.0 green:90/255.0 blue:18/255.0 alpha:1]
+#define KGREY [UIColor colorWithRed:177/255.0 green:177/255.0 blue:177/255.0 alpha:1]
+#define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+/*CoreData*/
+#import "BaseDao.h"
+#import "ConfigDao.h"
+#import "KitItem+CoreDataClass.h"
+#import "KitItem+CoreDataProperties.h"
+#import "MyDevice+CoreDataClass.h"
+#import "MyDevice+CoreDataProperties.h"
+#import "KitDevice+CoreDataClass.h"
+#import "KitDevice+CoreDataProperties.h"
+/*Other*/
+#import "Tools.h"
+#import "MyPageControl.h"
+
+
+#endif /* PrefixHeader_pch */

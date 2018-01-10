@@ -1,0 +1,29 @@
+PODS:
+  - AMap2DMap (5.6.0):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.4.2)
+  - AMapLocation (2.5.0):
+    - AMapFoundation (~> 1.4)
+  - AMapSearch (5.5.0):
+    - AMapFoundation (~> 1.4)
+  - JDStatusBarNotification (1.5.6)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - AMap2DMap
+  - AMapLocation
+  - AMapSearch
+  - JDStatusBarNotification
+  - Masonry
+
+SPEC CHECKSUMS:
+  AMap2DMap: cf0bfd6ae97951b55cc061903b814f924ba6c221
+  AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
+  AMapLocation: d02bd8c0081b0bc51b2e4cf89925ef57448263c9
+  AMapSearch: dc9958acfb61b58dcbce79736bf14a39dde7506f
+  JDStatusBarNotification: d5829a8f2f291b23b8a54b87fac8bf2549945a2f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 7c8e4dbfe7174fd58946b4b755da9c9ff0374379
+
+COCOAPODS: 1.2.1
