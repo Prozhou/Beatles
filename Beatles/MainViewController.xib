@@ -10,9 +10,26 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Light.otf">
+            <string>SourceHanSansCN-Light</string>
+        </array>
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+        <array key="SourceHanSansCN-Regular.otf">
+            <string>SourceHanSansCN-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
             <connections>
+                <outlet property="baseSettingBtnView" destination="bTy-A3-RVS" id="rGy-xt-bZy"/>
+                <outlet property="batteryBtnView" destination="dJ1-2s-mD2" id="Kfz-Bg-3Mh"/>
+                <outlet property="boardSettingBtnView" destination="KVR-cJ-F5b" id="05p-69-lAo"/>
+                <outlet property="kitBtnView" destination="9Cy-e1-otD" id="fAb-oP-MAC"/>
+                <outlet property="nameBtnView" destination="S8K-es-5Zc" id="lrw-u3-D3p"/>
+                <outlet property="storeBtnView" destination="KsQ-lE-uW7" id="wRq-2H-yKx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sVH-UD-fnV"/>
             </connections>
         </placeholder>
@@ -35,9 +52,9 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已连接" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyB-XU-PMx">
-                            <rect key="frame" x="99" y="603" width="52" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="103" y="603" width="45" height="15"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="15"/>
+                            <color key="textColor" red="0.21176470589999999" green="0.1529411765" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -55,23 +72,23 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8K-es-5Zc">
                             <rect key="frame" x="0.0" y="0.0" width="90" height="96"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                            <state key="normal" title="自拍">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="30"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.88627450980392153" green="0.39215686274509803" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-2s-mD2">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-2s-mD2">
                             <rect key="frame" x="0.0" y="97" width="90" height="96"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="电量">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.68627450980392157" green="0.25882352941176467" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVR-cJ-F5b">
                             <rect key="frame" x="0.0" y="194" width="90" height="96"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="面板设置">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="21"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.54117647058823526" green="0.1764705882352941" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="boardSettingBtn:" destination="-1" eventType="touchUpInside" id="rlc-GV-umD"/>
@@ -79,9 +96,9 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-A3-RVS">
                             <rect key="frame" x="0.0" y="291" width="90" height="95.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="基础设置">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.45490196078431372" green="0.15294117647058825" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="baseSettingBtn:" destination="-1" eventType="touchUpInside" id="G01-be-fsH"/>
@@ -89,9 +106,9 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-lE-uW7">
                             <rect key="frame" x="0.0" y="387.5" width="90" height="96"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal" title="仓库">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.28627450980392155" green="0.12549019607843137" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="storeBtn:" destination="-1" eventType="touchUpInside" id="9a5-JG-NPT"/>
@@ -99,9 +116,9 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cy-e1-otD">
                             <rect key="frame" x="0.0" y="484.5" width="90" height="96"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal" title="套件">
-                                <color key="titleColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.21176470588235294" green="0.15294117647058825" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="kitBtn:" destination="-1" eventType="touchUpInside" id="FBL-om-JFr"/>
@@ -201,7 +218,7 @@
                 <constraint firstItem="nZq-nf-pbS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1050:1206" id="xdF-MD-MyZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-97.5" y="110.5"/>
+            <point key="canvasLocation" x="-304" y="-14"/>
         </view>
     </objects>
     <resources>

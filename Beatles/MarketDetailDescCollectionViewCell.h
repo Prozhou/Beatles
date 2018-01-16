@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MarketDetailDescCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLable;
 
 @end

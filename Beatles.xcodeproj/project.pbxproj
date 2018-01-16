@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9502DFF020087EDF00E125C7 /* SourceHanSansCN-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9502DFEF20087EDE00E125C7 /* SourceHanSansCN-Bold.otf */; };
+		9502DFF120087F0B00E125C7 /* SourceHanSansCN-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 959236442004552A0043F0CD /* SourceHanSansCN-ExtraLight.otf */; };
+		9502DFF220087F0B00E125C7 /* SourceHanSansCN-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9592363F2004552A0043F0CD /* SourceHanSansCN-Heavy.otf */; };
+		9502DFF320087F0B00E125C7 /* SourceHanSansCN-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 959236402004552A0043F0CD /* SourceHanSansCN-Light.otf */; };
+		9502DFF420087F0B00E125C7 /* SourceHanSansCN-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9592363E2004552A0043F0CD /* SourceHanSansCN-Medium.otf */; };
+		9502DFF520087F0B00E125C7 /* SourceHanSansCN-Normal.otf in Resources */ = {isa = PBXBuildFile; fileRef = 959236422004552A0043F0CD /* SourceHanSansCN-Normal.otf */; };
+		9502DFF620087F0B00E125C7 /* SourceHanSansCN-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 959236432004552A0043F0CD /* SourceHanSansCN-Regular.otf */; };
+		9502DFF92008B28600E125C7 /* CALayer+LayerColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9502DFF82008B28600E125C7 /* CALayer+LayerColor.m */; };
 		951291FE20030C2100E9C9D8 /* MineSecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951291FC20030C2100E9C9D8 /* MineSecondTableViewCell.m */; };
 		951291FF20030C2100E9C9D8 /* MineSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951291FD20030C2100E9C9D8 /* MineSecondTableViewCell.xib */; };
 		951292032003156D00E9C9D8 /* MineNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 951292012003156D00E9C9D8 /* MineNormalTableViewCell.m */; };
@@ -59,6 +67,9 @@
 /* Begin PBXFileReference section */
 		3633257E41D3BC9ED40177DB /* libPods-Beatles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Beatles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5BBE703BCD23675C23FBEE /* Pods-Beatles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beatles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beatles/Pods-Beatles.debug.xcconfig"; sourceTree = "<group>"; };
+		9502DFEF20087EDE00E125C7 /* SourceHanSansCN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SourceHanSansCN-Bold.otf"; path = "Beatles/SourceHanSansCN-Bold.otf"; sourceTree = "<group>"; };
+		9502DFF72008B28600E125C7 /* CALayer+LayerColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+LayerColor.h"; sourceTree = "<group>"; };
+		9502DFF82008B28600E125C7 /* CALayer+LayerColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+LayerColor.m"; sourceTree = "<group>"; };
 		951291FB20030C2100E9C9D8 /* MineSecondTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineSecondTableViewCell.h; sourceTree = "<group>"; };
 		951291FC20030C2100E9C9D8 /* MineSecondTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineSecondTableViewCell.m; sourceTree = "<group>"; };
 		951291FD20030C2100E9C9D8 /* MineSecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineSecondTableViewCell.xib; sourceTree = "<group>"; };
@@ -174,6 +185,7 @@
 		951B113D1FE208E6003CA579 = {
 			isa = PBXGroup;
 			children = (
+				9502DFEF20087EDE00E125C7 /* SourceHanSansCN-Bold.otf */,
 				951B11481FE208E7003CA579 /* Beatles */,
 				951B11471FE208E7003CA579 /* Products */,
 				5BCB761F8A39D7FC5B3B53CB /* Pods */,
@@ -357,6 +369,8 @@
 				9582F7FD1FE9041D00145DE5 /* Tools.m */,
 				9582F7FF1FEA40A000145DE5 /* MyPageControl.h */,
 				9582F8001FEA40A000145DE5 /* MyPageControl.m */,
+				9502DFF72008B28600E125C7 /* CALayer+LayerColor.h */,
+				9502DFF82008B28600E125C7 /* CALayer+LayerColor.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -485,6 +499,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9502DFF120087F0B00E125C7 /* SourceHanSansCN-ExtraLight.otf in Resources */,
+				9502DFF220087F0B00E125C7 /* SourceHanSansCN-Heavy.otf in Resources */,
+				9502DFF320087F0B00E125C7 /* SourceHanSansCN-Light.otf in Resources */,
+				9502DFF420087F0B00E125C7 /* SourceHanSansCN-Medium.otf in Resources */,
+				9502DFF520087F0B00E125C7 /* SourceHanSansCN-Normal.otf in Resources */,
+				9502DFF620087F0B00E125C7 /* SourceHanSansCN-Regular.otf in Resources */,
+				9502DFF020087EDF00E125C7 /* SourceHanSansCN-Bold.otf in Resources */,
 				95A8CD832004A5DF0064F1F1 /* MarketDetailDescCollectionViewCell.xib in Resources */,
 				951B11591FE208E7003CA579 /* LaunchScreen.storyboard in Resources */,
 				951292042003156D00E9C9D8 /* MineNormalTableViewCell.xib in Resources */,
@@ -576,6 +597,7 @@
 				956BD7901FF4E95000C262BD /* KitDeviceDao.m in Sources */,
 				9592364820045D610043F0CD /* MarketItemCollectionViewCell.m in Sources */,
 				95A8CD7D2004A0B30064F1F1 /* MarketDetailViewController.m in Sources */,
+				9502DFF92008B28600E125C7 /* CALayer+LayerColor.m in Sources */,
 				956BD7871FF38F7100C262BD /* ConfigDao.m in Sources */,
 				951291FE20030C2100E9C9D8 /* MineSecondTableViewCell.m in Sources */,
 				951B114B1FE208E7003CA579 /* main.m in Sources */,

@@ -20,8 +20,8 @@
         UIView *baselineView = [[UIView alloc]initWithFrame:CGRectMake(0, 34, frame.size.width, 1)];
         baselineView.backgroundColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1];
         [self addSubview:baselineView];
-        UIImageView *rightImageView = [[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-40, 2, 30, 30)];
-        rightImageView.image = [UIImage imageNamed:@"蓝色钩框"];
+        UIImageView *rightImageView = [[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-20, 13, 8, 7)];
+        rightImageView.image = [UIImage imageNamed:@"小钩"];
         [self addSubview:rightImageView];
     }
     return self;

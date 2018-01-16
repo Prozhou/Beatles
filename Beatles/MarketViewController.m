@@ -23,9 +23,10 @@
     //self.saleCollectionview.backgroundColor = [UIColor clearColor];
     //self.salePageControl.backgroundColor = [UIColor clearColor];
     //self.centerView.backgroundColor = [UIColor clearColor];
-    //self.carButton.backgroundColor = [UIColor clearColor];
+    self.carButton.backgroundColor = [UIColor clearColor];
     saleTypeArray = @[@"面板配件",@"工具配件",@"其他配件"];
 }
+
 -(UICollectionView *)mainCollectionView{
     if (!_mainCollectionView) {
         UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
@@ -168,17 +169,30 @@
 -(UIButton *)carButton{
     if (!_carButton) {
         _carButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIPanGestureRecognizer *pan =[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panAction:)];
+        [_carButton addGestureRecognizer:pan];
         [_carButton setBackgroundImage:[UIImage imageNamed:@"购物车"] forState:UIControlStateNormal];
         [self.view addSubview:_carButton];
         [_carButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(CGSizeMake(40, 40));
-            make.right.equalTo(self.view.mas_right).offset(-40);
-            make.top.equalTo(_centerView.mas_bottom).offset(25);
+            make.size.equalTo(CGSizeMake(50, 50));
+            make.top.left.equalTo(self.view).offset(30);
         }];
+        _carButton.layer.cornerRadius = 25.0f;
+        _carButton.layer.shadowOpacity = 0.8f;
+        _carButton.layer.shadowOffset = CGSizeMake(1, 1);
+        _carButton.layer.shadowColor = [UIColor grayColor].CGColor;
     }
     return _carButton;
 }
-
+-(void)panAction:(UIPanGestureRecognizer *)pan
+{
+    //获取手势的位置
+    CGPoint position =[pan translationInView:_carButton];
+    //通过stransform 进行平移交换
+    _carButton.transform = CGAffineTransformTranslate(_carButton.transform, position.x, position.y);
+    //将增量置为零
+    [pan setTranslation:CGPointZero inView:_carButton];
+}
 #pragma MARK-- UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     if (collectionView == _mainCollectionView) {
@@ -192,17 +206,31 @@
     UICollectionViewCell *cell = nil;
     if (collectionView == _mainCollectionView) {
         MarketItemCollectionViewCell *marketCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"marketItemCell" forIndexPath:indexPath];
-        marketCell.typeLabel.text = saleTypeArray[indexPath.row];
+        NSMutableAttributedString *typeStr = [[NSMutableAttributedString alloc] initWithString:saleTypeArray[indexPath.row]];
+        [typeStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Medium" size:24]
+                        range:NSMakeRange(0, 2)];
+        [typeStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Light" size:24]
+                        range:NSMakeRange(2, 2)];
+        if (indexPath.row == 0) {
+            marketCell.typeLabel.textColor = KBROWN;
+        }else if(indexPath.row == 1){
+            marketCell.typeLabel.textColor = [UIColor colorWithRed:148.0/255.0 green:60/255.0 blue:118/255.0 alpha:1];
+        }else if(indexPath.row == 2){
+            marketCell.typeLabel.textColor = [UIColor colorWithRed:54.0/255.0 green:16/255.0 blue:130/255.0 alpha:1];
+        }
+        marketCell.typeLabel.attributedText = typeStr;
         marketCell.saleItemCollectionView.delegate =self;
         marketCell.saleItemCollectionView.dataSource = self;
         marketCell.saleItemCollectionView.tag = indexPath.row;
+        marketCell.saleItemCollectionView.pagingEnabled = YES;
         UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
         layout.sectionHeadersPinToVisibleBounds = YES;
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         marketCell.saleItemCollectionView.collectionViewLayout = layout;
-        marketCell.saleItemCollectionView.pagingEnabled = false;
         marketCell.saleItemCollectionView.showsHorizontalScrollIndicator = false;
         [marketCell.saleItemCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"saleCell"];
         cell = marketCell;
@@ -215,19 +243,70 @@
         [saleImageV setImage:[UIImage imageNamed:@"商城1"]];
         [imageCell addSubview:saleImageV];
         [saleImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.bottom.left.right.equalTo(imageCell);
+            make.top.equalTo(imageCell).offset(10);
+            make.bottom.equalTo(imageCell).offset(-10);
+            make.centerX.equalTo(imageCell);
+            make.height.equalTo(saleImageV.mas_width).multipliedBy(313/750.0);
         }];
+//        NSMutableAttributedString *typeStr = [[NSMutableAttributedString alloc] initWithString:@"面板配件"];
+//        [typeStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Medium" size:24]
+//                        range:NSMakeRange(0, 2)];
+//        [typeStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Light" size:24]
+//                        range:NSMakeRange(2, 2)];
+//        UILabel *typeLabel = [[UILabel alloc]init];
+//        [imageCell addSubview:typeLabel];
+//        typeLabel.textColor = KBROWN;
+//        typeLabel.attributedText = typeStr;
+//        typeLabel.textAlignment = NSTextAlignmentRight;
+//        [typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(imageCell).offset(20);
+//            make.right.equalTo(imageCell).offset(-50);
+//        }];
+        
+        UILabel *nameLabel = [[UILabel alloc]init];
+        [imageCell addSubview:nameLabel];
+        nameLabel.textColor = KBLUE;
+        nameLabel.text = @"播放器";
+        nameLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:18];
+        nameLabel.textAlignment = NSTextAlignmentRight;
+        [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(imageCell).offset(54);
+            make.right.equalTo(imageCell).offset(-50);
+        }];
+        
+        NSMutableAttributedString *priceStr = [[NSMutableAttributedString alloc] initWithString:@"¥299"];
+        [priceStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:12]
+                        range:NSMakeRange(0, 1)];
+        [priceStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:15]
+                        range:NSMakeRange(1, priceStr.length - 1)];
+        
+        UILabel *priceLabel = [[UILabel alloc]init];
+        [imageCell addSubview:priceLabel];
+        priceLabel.textColor = KBLUE;
+        priceLabel.attributedText = priceStr;
+        priceLabel.textAlignment = NSTextAlignmentRight;
+        [priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(nameLabel.mas_bottom).offset(5);
+            make.right.equalTo(imageCell).offset(-50);
+        }];
+        
+        
         cell = imageCell;
     }
     return cell;
 }
 #pragma MARK-- UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if (collectionView == _mainCollectionView) {
+    return CGSizeMake(SCREENWIDTH,SCREENWIDTH *340/750);
+    /*if (collectionView == _mainCollectionView) {
         return CGSizeMake(600.0/750*SCREENWIDTH, 340/1334.0*SCREENHEIGHT);
     }else{
         return CGSizeMake((340/1334.0*SCREENHEIGHT - 20)*750/313, 340/1334.0*SCREENHEIGHT - 20);
-    }
+    }*/
 }
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 //{
@@ -239,32 +318,32 @@
     MarketDetailViewController *marketDetailVC = [[MarketDetailViewController alloc]init];
     [self.navigationController pushViewController:marketDetailVC animated:YES];
 }
--(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
-//    NSLog(@"%f%f",targetContentOffset->x,targetContentOffset->y);
-    
-    float pageWidth = pageWidth = scrollView.frame.size.width;
-    
-    float currentOffset = scrollView.contentOffset.x;
-    float targetOffset = targetContentOffset->x;
-    float newTargetOffset = 0;
-    
-    if (targetOffset > currentOffset)
-        newTargetOffset = ceilf(currentOffset / pageWidth) * pageWidth;
-    else
-        newTargetOffset = floorf(currentOffset / pageWidth) * pageWidth;
-    
-    if (newTargetOffset < 0)
-        newTargetOffset = 0;
-    else if (newTargetOffset > scrollView.contentSize.width)
-        newTargetOffset = scrollView.contentSize.width;
-    
-    targetContentOffset->x = currentOffset;
-    
-    [scrollView setContentOffset:CGPointMake(newTargetOffset, 0) animated:YES];
-    
-//    NSLog(F(@"%@",@(newTargetOffset)));
-    
-}
+//-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+////    NSLog(@"%f%f",targetContentOffset->x,targetContentOffset->y);
+//
+//    float pageWidth = pageWidth = scrollView.frame.size.width;
+//
+//    float currentOffset = scrollView.contentOffset.x;
+//    float targetOffset = targetContentOffset->x;
+//    float newTargetOffset = 0;
+//
+//    if (targetOffset > currentOffset)
+//        newTargetOffset = ceilf(currentOffset / pageWidth) * pageWidth;
+//    else
+//        newTargetOffset = floorf(currentOffset / pageWidth) * pageWidth;
+//
+//    if (newTargetOffset < 0)
+//        newTargetOffset = 0;
+//    else if (newTargetOffset > scrollView.contentSize.width)
+//        newTargetOffset = scrollView.contentSize.width;
+//
+//    targetContentOffset->x = currentOffset;
+//
+//    [scrollView setContentOffset:CGPointMake(newTargetOffset, 0) animated:YES];
+//
+////    NSLog(F(@"%@",@(newTargetOffset)));
+//
+//}
 //-(CGPoint)collectionViewOffSetWithTargetContentOffSet:(CGPoint*)point{
 //
 //    return CGPointMake(100, 0);

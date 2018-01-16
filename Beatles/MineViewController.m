@@ -25,8 +25,8 @@
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
     self.view.backgroundColor = [UIColor whiteColor];
-    
     self.mainTable.backgroundColor = [UIColor whiteColor];
+
 }
 -(UITableView *)mainTable{
     if (!_mainTable) {
@@ -37,7 +37,6 @@
             make.left.right.top.bottom.equalTo(self.view);
         }];
         _mainTable.backgroundColor = [UIColor blueColor];
-        
         [_mainTable registerNib:[UINib nibWithNibName:@"MineHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"headerCell"];
         [_mainTable registerNib:[UINib nibWithNibName:@"MineSecondTableViewCell" bundle:nil] forCellReuseIdentifier:@"secondCell"];
         [_mainTable registerNib:[UINib nibWithNibName:@"MineNormalTableViewCell" bundle:nil] forCellReuseIdentifier:@"normalCell"];
@@ -68,8 +67,11 @@
         case 4:
             return 80.0/1334* SCREENHEIGHT;
             break;
+        case 5:
+            return 50;
+            break;
         default:
-            return 30;
+            return 20;
             break;
     }
 }
@@ -108,20 +110,29 @@
             NormalCell.titleLable.text = normalTitleArray[indexPath.row-2];
         }
             break;
+        case 5:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"textCell1"];
+            if (!cell) {
+                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"textCell1"];
+                UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(38, 20, 200,20)];
+                textLabel.textColor = [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1];
+                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:18];
+                [cell addSubview:textLabel];
+                textLabel.text = @"关于我们";
+            }
+        }
+            break;
         default:
         {
             cell = [tableView dequeueReusableCellWithIdentifier:@"textCell"];
             if (!cell) {
                 cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"textCell"];
-                UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(38, 0, 200, 30)];
+                UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(38, 0, 200,20)];
                 textLabel.textColor = [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1];
-                textLabel.font = [UIFont systemFontOfSize:15];
+                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:18];
                 [cell addSubview:textLabel];
-                if (indexPath.row==5) {
-                    textLabel.text = @"关于我们";
-                }else{
-                    textLabel.text = @"联系我们";
-                }
+                textLabel.text = @"联系我们";
             }
         }
             break;

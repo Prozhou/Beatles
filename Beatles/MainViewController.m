@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.nameBtnView.titleLabel.numberOfLines = 0;
+    [self.nameBtnView setTitle:@"自拍\n面板" forState:UIControlStateNormal];
+    self.batteryBtnView.titleLabel.numberOfLines = 0;
+    [self.batteryBtnView setTitle:@"电量\n80%" forState:UIControlStateNormal];
+    self.boardSettingBtnView.titleLabel.numberOfLines = 0;
+    [self.boardSettingBtnView setTitle:@"面板\n设置" forState:UIControlStateNormal];
+    self.baseSettingBtnView.titleLabel.numberOfLines = 0;
+    [self.baseSettingBtnView setTitle:@"基础\n设置" forState:UIControlStateNormal];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -24,6 +31,8 @@
 }
 
 - (IBAction)boardSettingBtn:(UIButton *)sender {
+    SettingViewController *setVC = [[SettingViewController alloc]init];
+    [self.navigationController pushViewController:setVC animated:YES];
 }
 
 - (IBAction)baseSettingBtn:(UIButton *)sender {

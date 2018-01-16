@@ -11,5 +11,7 @@
 @interface MarketDetailViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UICollectionView *saleDescCollectionView;
 @property (weak, nonatomic) IBOutlet UICollectionView *kitCollectionView;
-
+@property (weak, nonatomic) IBOutlet UILabel *typeLabel;
+@property(nonatomic,strong)UIButton *carButton;
+@property(nonatomic,strong)UIButton *backButton;
 @end

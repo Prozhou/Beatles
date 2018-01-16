@@ -17,9 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImageView *bgImageV = [[UIImageView alloc]initWithFrame:self.view.frame];
-    [bgImageV setImage:[UIImage imageNamed:@"背景"]];
-    [self.view addSubview:bgImageV];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.topView setBackgroundColor:[UIColor clearColor]];
     [self.leftView setBackgroundColor:[UIColor clearColor]];
     [self.rightView setBackgroundColor:[UIColor clearColor]];
@@ -39,13 +37,16 @@
 -(UILabel *)titleLabel{
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc]init];
-        _titleLabel.text=@"组件 设置";
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.font = [UIFont systemFontOfSize:15];
+        _titleLabel.text=@"功能设置";
+        _titleLabel.textAlignment = NSTextAlignmentLeft;
+        _titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:24];
+        _titleLabel.textColor = KBLUE2;
         [_topView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(_topView);
-            make.size.equalTo(CGSizeMake(SCREENWIDTH, 30));
+            make.left.equalTo(self.view.mas_centerX).offset(30);
+//            make.left.equalTo(_topView.mas_centerX);
+            make.size.equalTo(CGSizeMake(SCREENWIDTH/2, 30));
+            make.bottom.equalTo(_topView).offset(-10);
         }];
     }
     return _titleLabel;
@@ -71,7 +72,7 @@
         [_imageView setImage:[UIImage imageNamed:@"设置界面面板"]];
         [_leftView addSubview:_imageView];
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(_leftView.mas_top).offset(40);
+            make.top.equalTo(_leftView.mas_top).offset(20);
             make.left.equalTo(_leftView.mas_left).offset(15);
             make.right.equalTo(_leftView.mas_right).offset(-10);
             make.height.equalTo(_imageView.mas_width).multipliedBy(600.0/338);
@@ -107,8 +108,8 @@
         
         [_settingCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_rightView.mas_top);
-            make.left.equalTo(_rightView.mas_left);
-            make.right.equalTo(_rightView.mas_right).offset(-20);
+            make.left.equalTo(_rightView.mas_left).offset(30);
+            make.right.equalTo(_rightView.mas_right).offset(-36);
             make.bottom.equalTo(_rightView.mas_bottom).offset(-50);
         }];
     }
@@ -119,9 +120,11 @@
     return 5;
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *titleArray = @[@"防丢器开关",@"声音",@"震动",@"勿扰区域",@"勿扰时段"];
+    NSArray *titleArray = @[@"大小尺寸",@"颜色",@"使用习惯",@"灯光",@"省电"];
     SettingItemTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"settingTextCellId" forIndexPath:indexPath];
     cell.titleLabel.text = titleArray[indexPath.row];
+    cell.titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:15];
+    cell.titleLabel.textColor = KBLUE2;
     return cell;
 }
 /*
