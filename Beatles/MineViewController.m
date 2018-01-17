@@ -65,7 +65,7 @@
         case 2:
         case 3:
         case 4:
-            return 80.0/1334* SCREENHEIGHT;
+            return 40;
             break;
         case 5:
             return 50;
@@ -117,7 +117,7 @@
                 cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"textCell1"];
                 UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(38, 20, 200,20)];
                 textLabel.textColor = [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1];
-                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:18];
+                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Normal" size:18];
                 [cell addSubview:textLabel];
                 textLabel.text = @"关于我们";
             }
@@ -130,7 +130,7 @@
                 cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"textCell"];
                 UILabel *textLabel = [[UILabel alloc]initWithFrame:CGRectMake(38, 0, 200,20)];
                 textLabel.textColor = [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1];
-                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:18];
+                textLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Normal" size:18];
                 [cell addSubview:textLabel];
                 textLabel.text = @"联系我们";
             }

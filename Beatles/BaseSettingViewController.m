@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     titleArray = @[@"蓝牙连接/断开",@"防丢功能",@"遗失记录",@"勿扰区域/时段",@"断开提醒",@"省电",@"升级"];
+    [_mainTableView setTableFooterView:[UIView new]];
     [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     // Do any additional setup after loading the view from its nib.
 }

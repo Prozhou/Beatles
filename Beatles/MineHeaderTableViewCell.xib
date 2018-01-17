@@ -15,9 +15,6 @@
         <array key="SourceHanSansCN-Normal.otf">
             <string>SourceHanSansCN-Normal</string>
         </array>
-        <array key="SourceHanSansCN-Regular.otf">
-            <string>SourceHanSansCN-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -30,44 +27,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcW-lO-ELf">
-                        <rect key="frame" x="40" y="134.5" width="187.5" height="15"/>
+                        <rect key="frame" x="40" y="131.5" width="187.5" height="18"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已认证" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoF-qI-9og">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="15"/>
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="0qO-ad-ZNC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-or-aq8">
-                                <rect key="frame" x="61" y="0.0" width="34" height="15"/>
+                                <rect key="frame" x="61" y="0.0" width="34" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="34" id="dYE-hK-gxZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NJ-cE-kh2">
-                                <rect key="frame" x="101" y="0.0" width="86.5" height="14.5"/>
+                                <rect key="frame" x="101" y="0.0" width="86.5" height="17.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHG-qe-Ovo">
-                                <rect key="frame" x="60" y="0.0" width="1" height="15"/>
+                                <rect key="frame" x="60" y="0.0" width="1" height="18"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="05O-Fz-Z4K"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zto-M2-Jdb">
-                                <rect key="frame" x="95" y="0.0" width="1" height="15"/>
+                                <rect key="frame" x="95" y="0.0" width="1" height="18"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="yHn-0w-qdt"/>
@@ -84,7 +81,7 @@
                             <constraint firstAttribute="bottom" secondItem="oHG-qe-Ovo" secondAttribute="bottom" id="HW2-pG-YWl"/>
                             <constraint firstAttribute="bottom" secondItem="zto-M2-Jdb" secondAttribute="bottom" id="N2j-yR-mAI"/>
                             <constraint firstItem="yoF-qI-9og" firstAttribute="leading" secondItem="IcW-lO-ELf" secondAttribute="leading" id="XfS-5Y-iJn"/>
-                            <constraint firstAttribute="height" constant="15" id="ZNl-qp-3lj"/>
+                            <constraint firstAttribute="height" constant="18" id="ZNl-qp-3lj"/>
                             <constraint firstAttribute="bottom" secondItem="yoF-qI-9og" secondAttribute="bottom" id="dfd-wv-hzC"/>
                             <constraint firstItem="oHG-qe-Ovo" firstAttribute="top" secondItem="IcW-lO-ELf" secondAttribute="top" id="h6g-rJ-VHL"/>
                             <constraint firstItem="5NJ-cE-kh2" firstAttribute="top" secondItem="IcW-lO-ELf" secondAttribute="top" id="lOD-mC-JIi"/>
@@ -98,8 +95,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQZ-Go-3t0">
                         <rect key="frame" x="219" y="66.5" width="86" height="86"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QQ小标" translatesAutoresizingMaskIntoConstraints="NO" id="IId-5M-be4">
-                                <rect key="frame" x="3" y="3" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="IId-5M-be4">
+                                <rect key="frame" x="4" y="4" width="78" height="78"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -111,12 +108,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IId-5M-be4" firstAttribute="leading" secondItem="UQZ-Go-3t0" secondAttribute="leading" constant="3" id="1CC-54-xbA"/>
+                            <constraint firstItem="IId-5M-be4" firstAttribute="leading" secondItem="UQZ-Go-3t0" secondAttribute="leading" constant="4" id="1CC-54-xbA"/>
                             <constraint firstAttribute="width" constant="86" id="6bF-dV-tzg"/>
-                            <constraint firstItem="IId-5M-be4" firstAttribute="top" secondItem="UQZ-Go-3t0" secondAttribute="top" constant="3" id="FlQ-4v-Ycb"/>
+                            <constraint firstItem="IId-5M-be4" firstAttribute="top" secondItem="UQZ-Go-3t0" secondAttribute="top" constant="4" id="FlQ-4v-Ycb"/>
                             <constraint firstAttribute="width" secondItem="UQZ-Go-3t0" secondAttribute="height" multiplier="1:1" id="TTT-s0-Hxj"/>
-                            <constraint firstAttribute="trailing" secondItem="IId-5M-be4" secondAttribute="trailing" constant="3" id="fzA-kO-Uze"/>
-                            <constraint firstAttribute="bottom" secondItem="IId-5M-be4" secondAttribute="bottom" constant="3" id="tgi-He-FP7"/>
+                            <constraint firstAttribute="trailing" secondItem="IId-5M-be4" secondAttribute="trailing" constant="4" id="fzA-kO-Uze"/>
+                            <constraint firstAttribute="bottom" secondItem="IId-5M-be4" secondAttribute="bottom" constant="4" id="tgi-He-FP7"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -124,7 +121,7 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="1"/>
+                                <real key="value" value="0.5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
                                 <color key="value" red="0.82461532360406098" green="0.82461532360406098" blue="0.82461532360406098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,7 +136,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="午后阳光" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5a-Rc-e7t">
-                        <rect key="frame" x="40" y="94.5" width="149" height="30"/>
+                        <rect key="frame" x="40" y="91.5" width="149" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="Ydg-lF-54j"/>
                         </constraints>
@@ -166,7 +163,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="QQ小标" width="60" height="60"/>
-        <image name="右角" width="9" height="17"/>
+        <image name="右角" width="4" height="8"/>
+        <image name="头像" width="153" height="153"/>
     </resources>
 </document>

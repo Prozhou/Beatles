@@ -11,6 +11,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Medium.otf">
+            <string>SourceHanSansCN-Medium</string>
+        </array>
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
         <array key="SourceHanSansCN-Regular.otf">
             <string>SourceHanSansCN-Regular</string>
         </array>
@@ -29,11 +35,11 @@
                         <rect key="frame" x="0.0" y="137.5" width="750" height="137"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUq-3F-Me6">
-                                <rect key="frame" x="374.5" y="58.5" width="1" height="20"/>
+                                <rect key="frame" x="374.5" y="73.5" width="1" height="20"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0hd-ik-Gyv"/>
-                                    <constraint firstAttribute="width" constant="1" id="WAK-Z6-HHj"/>
+                                    <constraint firstAttribute="width" constant="0.5" id="WAK-Z6-HHj"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nL-IC-sY1">
@@ -41,7 +47,7 @@
                                 <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="24"/>
                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-20"/>
                                 <state key="normal" title="求助">
-                                    <color key="titleColor" red="0.71764705882352942" green="0.16862745098039217" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfR-qC-V0W">
@@ -63,7 +69,7 @@
                             <constraint firstItem="1nL-IC-sY1" firstAttribute="leading" secondItem="NWJ-j3-QYb" secondAttribute="leading" constant="20" id="eqy-tv-VLH"/>
                             <constraint firstAttribute="trailing" secondItem="NfR-qC-V0W" secondAttribute="trailing" constant="20" id="f82-lv-0I5"/>
                             <constraint firstAttribute="bottom" secondItem="NfR-qC-V0W" secondAttribute="bottom" constant="10" id="m5R-OZ-wRg"/>
-                            <constraint firstItem="WUq-3F-Me6" firstAttribute="centerY" secondItem="NWJ-j3-QYb" secondAttribute="centerY" id="rsM-0d-Sfz"/>
+                            <constraint firstItem="WUq-3F-Me6" firstAttribute="centerY" secondItem="NWJ-j3-QYb" secondAttribute="centerY" constant="15" id="rsM-0d-Sfz"/>
                             <constraint firstItem="NfR-qC-V0W" firstAttribute="leading" secondItem="WUq-3F-Me6" secondAttribute="trailing" constant="20" id="z9i-fZ-U6x"/>
                         </constraints>
                     </view>
@@ -74,16 +80,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="137.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="桃心" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-2L-xZb">
-                                        <rect key="frame" x="140" y="20" width="20" height="20"/>
+                                        <rect key="frame" x="141" y="20" width="18" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="C2a-yU-1Va"/>
-                                            <constraint firstAttribute="width" constant="20" id="yGW-lt-p2P"/>
+                                            <constraint firstAttribute="height" constant="15" id="C2a-yU-1Va"/>
+                                            <constraint firstAttribute="width" constant="18" id="yGW-lt-p2P"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="280" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fT3-ku-XgO">
-                                        <rect key="frame" x="20" y="50" width="260" height="18"/>
-                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
-                                        <color key="textColor" red="0.71764705880000002" green="0.16862745100000001" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="20" y="45" width="260" height="18"/>
+                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -101,20 +107,17 @@
                                 <rect key="frame" x="300" y="0.0" width="450" height="137.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="称号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mby-E0-Nst">
-                                        <rect key="frame" x="0.0" y="20" width="450" height="20"/>
+                                        <rect key="frame" x="0.0" y="20" width="450" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="EUM-CU-H7D"/>
+                                            <constraint firstAttribute="height" constant="15" id="EUM-CU-H7D"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Medium" family="Source Han Sans CN" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热心肠|甲虫粉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-rB-2gt">
-                                        <rect key="frame" x="0.0" y="50" width="450" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="pQK-t0-GMU"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热心肠  |  甲虫粉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVK-rB-2gt">
+                                        <rect key="frame" x="0.0" y="45" width="450" height="18"/>
+                                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
                                         <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -155,7 +158,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="74" y="-40"/>
+            <point key="canvasLocation" x="48" y="-55"/>
         </tableViewCell>
     </objects>
     <resources>

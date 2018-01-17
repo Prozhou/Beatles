@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.nameBtnView.titleLabel.numberOfLines = 0;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     [self.nameBtnView setTitle:@"自拍\n面板" forState:UIControlStateNormal];
     self.batteryBtnView.titleLabel.numberOfLines = 0;
     [self.batteryBtnView setTitle:@"电量\n80%" forState:UIControlStateNormal];

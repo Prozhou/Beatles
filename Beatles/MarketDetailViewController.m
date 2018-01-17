@@ -30,7 +30,7 @@
     if (!_backButton) {
         _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.view addSubview:_backButton];
-        [_backButton setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
+//        [_backButton setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
         [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view.mas_left).offset(38);
             make.top.equalTo(self.view.mas_top).offset(50);
@@ -42,9 +42,18 @@
         _backButton.layer.shadowOffset = CGSizeMake(1, 1);
         _backButton.layer.shadowColor = [UIColor blackColor].CGColor;
         _backButton.transform = CGAffineTransformRotate(_carButton.transform, M_PI / 4);
-//        _backButton.imageView.transform = CGAffineTransformRotate(_carButton.imageView.transform, - M_PI / 4);
+        UIImageView *bgImgV = [[UIImageView alloc]init];
+        [bgImgV setImage:[UIImage imageNamed:@"返回"]];
+        [_backButton addSubview:bgImgV];
+        [bgImgV mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.size.equalTo(CGSizeMake(20, 20));
+            make.center.equalTo(_backButton.center);
+//            make.centerY.equalTo(_backButton.mas_centerY);
+//            make.centerX.equalTo(_backButton.mas_centerX).offset(-8);
+        }];
+        bgImgV.transform = CGAffineTransformRotate(bgImgV.transform, - M_PI / 4);
         [_backButton addTarget:self action:@selector(backToMarketMain) forControlEvents:UIControlEventTouchUpInside];
-//        [_backButton ];
+        
     }
     return _backButton;
 }
@@ -100,10 +109,18 @@
                         value:[UIFont fontWithName:@"SourceHanSansCN-Light" size:24]
                         range:NSMakeRange(2, 2)];
         _typeLabel.attributedText = typeStr;
+        
+        NSMutableAttributedString *priceStr = [[NSMutableAttributedString alloc] initWithString:@"¥399"];
+        [priceStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:15]
+                        range:NSMakeRange(0, 1)];
+        [priceStr addAttribute:NSFontAttributeName
+                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:18]
+                        range:NSMakeRange(1, 2)];
+        descCell.priceLable.attributedText = priceStr;
         cell = descCell;
     }else{
         MarketKitCollectionViewCell *kitCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"kitCell" forIndexPath:indexPath];
-        
         cell = kitCell;
     }
     return cell;

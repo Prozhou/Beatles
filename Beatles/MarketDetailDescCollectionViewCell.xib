@@ -29,13 +29,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="播放器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyu-bM-5ag">
-                        <rect key="frame" x="275.5" y="84" width="54.5" height="18"/>
-                        <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="18"/>
+                        <rect key="frame" x="275.5" y="92" width="54.5" height="18"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Regular" family="Source Han Sans CN" pointSize="18"/>
                         <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥399" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNw-R5-rAu">
-                        <rect key="frame" x="291" y="107" width="39" height="18"/>
+                        <rect key="frame" x="291" y="115" width="39" height="18"/>
                         <fontDescription key="fontDescription" name="SourceHanSansCN-Light" family="Source Han Sans CN" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -53,6 +53,13 @@
                             <constraint firstAttribute="height" constant="0.5" id="mg0-ST-Ck1"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="商城详情产品图" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-Ct-Tdz">
+                        <rect key="frame" x="73.5" y="75.5" width="158" height="143"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="143" id="NHV-IG-rHg"/>
+                            <constraint firstAttribute="width" constant="158" id="jnV-Oy-HTp"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -64,10 +71,12 @@
                 <constraint firstAttribute="trailing" secondItem="ehh-Qr-exR" secondAttribute="trailing" constant="50" id="Fh8-JW-aM6"/>
                 <constraint firstItem="ehh-Qr-exR" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="1:6" id="UOE-rY-9cT"/>
                 <constraint firstAttribute="trailing" secondItem="Gyu-bM-5ag" secondAttribute="trailing" constant="45" id="Ulz-ON-a11"/>
+                <constraint firstItem="ehh-Qr-exR" firstAttribute="top" secondItem="OHF-Ct-Tdz" secondAttribute="bottom" constant="30" id="VWN-RZ-3ew"/>
+                <constraint firstItem="OHF-Ct-Tdz" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" constant="-35" id="WOC-6n-yqa"/>
                 <constraint firstItem="SXN-mX-3ZL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="38" id="aPX-Qc-iJf"/>
                 <constraint firstItem="wNw-R5-rAu" firstAttribute="top" secondItem="Gyu-bM-5ag" secondAttribute="bottom" constant="5" id="kfg-mZ-5F2"/>
                 <constraint firstAttribute="bottom" secondItem="ehh-Qr-exR" secondAttribute="bottom" constant="10" id="raI-NP-Zoy"/>
-                <constraint firstItem="Gyu-bM-5ag" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="84" id="tJW-bW-iVN"/>
+                <constraint firstItem="Gyu-bM-5ag" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="92" id="tJW-bW-iVN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="303" height="182"/>
@@ -75,7 +84,10 @@
                 <outlet property="nameLabel" destination="Gyu-bM-5ag" id="e5L-SU-BPt"/>
                 <outlet property="priceLable" destination="wNw-R5-rAu" id="Hvj-cz-5pW"/>
             </connections>
-            <point key="canvasLocation" x="-104" y="-85"/>
+            <point key="canvasLocation" x="-65.5" y="-84"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="商城详情产品图" width="316" height="286"/>
+    </resources>
 </document>
