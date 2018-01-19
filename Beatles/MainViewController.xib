@@ -28,6 +28,8 @@
                 <outlet property="batteryBtnView" destination="dJ1-2s-mD2" id="Kfz-Bg-3Mh"/>
                 <outlet property="boardSettingBtnView" destination="KVR-cJ-F5b" id="05p-69-lAo"/>
                 <outlet property="kitBtnView" destination="9Cy-e1-otD" id="fAb-oP-MAC"/>
+                <outlet property="mainImageView" destination="J6B-fi-rMu" id="9Kn-tK-W7W"/>
+                <outlet property="mainLeftView" destination="kxq-0v-6GV" id="CWl-hI-sfB"/>
                 <outlet property="nameBtnView" destination="S8K-es-5Zc" id="lrw-u3-D3p"/>
                 <outlet property="storeBtnView" destination="KsQ-lE-uW7" id="wRq-2H-yKx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sVH-UD-fnV"/>
@@ -41,8 +43,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxq-0v-6GV">
                     <rect key="frame" x="0.0" y="0.0" width="250" height="603"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="主界面图" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-fi-rMu">
-                            <rect key="frame" x="62.5" y="104.5" width="126" height="394.5"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0_0" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-fi-rMu">
+                            <rect key="frame" x="45" y="104.5" width="161" height="394.5"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="蓝牙标" translatesAutoresizingMaskIntoConstraints="NO" id="byA-7B-Xlr">
                             <rect key="frame" x="117" y="539" width="16" height="22"/>
@@ -95,7 +97,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-A3-RVS">
-                            <rect key="frame" x="0.0" y="263.5" width="90" height="86"/>
+                            <rect key="frame" x="0.0" y="263.5" width="90" height="87"/>
                             <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal">
                                 <color key="titleColor" red="0.54117647058823526" green="0.1764705882352941" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,7 +107,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsQ-lE-uW7">
-                            <rect key="frame" x="0.0" y="350.5" width="90" height="87"/>
+                            <rect key="frame" x="0.0" y="351.5" width="90" height="86"/>
                             <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal" title="仓库">
                                 <color key="titleColor" red="0.21176470588235294" green="0.062745098039215685" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,7 +148,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fx2-vS-SJq">
-                            <rect key="frame" x="0.0" y="349.5" width="90" height="1"/>
+                            <rect key="frame" x="0.0" y="350.5" width="90" height="1"/>
                             <color key="backgroundColor" red="0.69411764705882351" green="0.69411764705882351" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="WGp-9p-2Pf"/>
@@ -210,7 +212,7 @@
                 <constraint firstItem="nZq-nf-pbS" firstAttribute="leading" secondItem="kxq-0v-6GV" secondAttribute="trailing" id="8Mu-sw-F7l"/>
                 <constraint firstItem="J6B-fi-rMu" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="713:1206" id="KmR-Mi-IKV"/>
                 <constraint firstAttribute="bottom" secondItem="kxq-0v-6GV" secondAttribute="bottom" constant="64" id="NBs-wm-FGZ"/>
-                <constraint firstItem="J6B-fi-rMu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="252:750" id="SeR-Zb-g7e"/>
+                <constraint firstItem="J6B-fi-rMu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="300:700" id="SeR-Zb-g7e"/>
                 <constraint firstItem="kxq-0v-6GV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="THV-jO-y4a"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nZq-nf-pbS" secondAttribute="trailing" id="VoL-Y0-l10"/>
                 <constraint firstItem="kxq-0v-6GV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rmE-bQ-Jzu"/>
@@ -218,11 +220,11 @@
                 <constraint firstItem="nZq-nf-pbS" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1050:1334" id="xdF-MD-MyZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-215.5" y="-25.5"/>
+            <point key="canvasLocation" x="-475" y="-51"/>
         </view>
     </objects>
     <resources>
-        <image name="主界面图" width="252" height="713"/>
+        <image name="0_0" width="300" height="700"/>
         <image name="蓝牙标" width="32" height="44"/>
     </resources>
 </document>

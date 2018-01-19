@@ -10,6 +10,10 @@
 
 
 @interface MainViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *mainLeftView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+
 @property (weak, nonatomic) IBOutlet UIButton *nameBtnView;
 @property (weak, nonatomic) IBOutlet UIButton *batteryBtnView;
 @property (weak, nonatomic) IBOutlet UIButton *boardSettingBtnView;
