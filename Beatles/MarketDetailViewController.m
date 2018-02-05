@@ -24,7 +24,7 @@
     [_kitCollectionView registerNib:[UINib nibWithNibName:@"MarketKitCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"kitCell"];
     self.carButton.backgroundColor = [UIColor clearColor];
     self.backButton.backgroundColor = [UIColor whiteColor];
-    // Do any additional setup after loading the view from its nib.
+    [self.buyBtnView setGradientType:leftToRight fromColors:@[KPEACH,KLAKEBLUE]];
 }
 -(UIButton *)backButton{
     if (!_backButton) {
@@ -33,7 +33,7 @@
 //        [_backButton setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
         [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.view.mas_left).offset(38);
-            make.top.equalTo(self.view.mas_top).offset(50);
+            make.top.equalTo(self.view.mas_top).offset(40);
             make.size.equalTo(CGSizeMake(45, 45));
         }];
         _backButton.layer.borderWidth = 0.5;
@@ -101,23 +101,23 @@
     UICollectionViewCell *cell = nil;
     if (collectionView == _saleDescCollectionView) {
         MarketDetailDescCollectionViewCell *descCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"saleDescCell" forIndexPath:indexPath];
-        NSMutableAttributedString *typeStr = [[NSMutableAttributedString alloc] initWithString:@"面板配件"];
-        [typeStr addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"SourceHanSansCN-Medium" size:24]
-                        range:NSMakeRange(0, 2)];
-        [typeStr addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"SourceHanSansCN-Light" size:24]
-                        range:NSMakeRange(2, 2)];
-        _typeLabel.attributedText = typeStr;
-        
-        NSMutableAttributedString *priceStr = [[NSMutableAttributedString alloc] initWithString:@"¥399"];
-        [priceStr addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:15]
-                        range:NSMakeRange(0, 1)];
-        [priceStr addAttribute:NSFontAttributeName
-                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:18]
-                        range:NSMakeRange(1, 2)];
-        descCell.priceLable.attributedText = priceStr;
+//        NSMutableAttributedString *typeStr = [[NSMutableAttributedString alloc] initWithString:@"面板配件"];
+//        [typeStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Medium" size:24]
+//                        range:NSMakeRange(0, 2)];
+//        [typeStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Light" size:24]
+//                        range:NSMakeRange(2, 2)];
+//        _typeLabel.attributedText = typeStr;
+//
+//        NSMutableAttributedString *priceStr = [[NSMutableAttributedString alloc] initWithString:@"¥399"];
+//        [priceStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:15]
+//                        range:NSMakeRange(0, 1)];
+//        [priceStr addAttribute:NSFontAttributeName
+//                        value:[UIFont fontWithName:@"SourceHanSansCN-Normal" size:18]
+//                        range:NSMakeRange(1, 2)];
+//        descCell.priceLable.attributedText = priceStr;
         cell = descCell;
     }else{
         MarketKitCollectionViewCell *kitCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"kitCell" forIndexPath:indexPath];

@@ -9,8 +9,9 @@
 #import "MainViewController.h"
 #import "SettingView.h"
 
-@interface MainViewController ()/*<UIGestureRecognizerDelegate>*/{
+@interface MainViewController (){
     int  curPicIndex;
+    PanelState panelState;
 }
 @end
 
@@ -18,17 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.nameBtnView.titleLabel.numberOfLines = 0;
+    curPicIndex=12;
+    panelState = PanelStateBack;
     self.automaticallyAdjustsScrollViewInsets = YES;
-    [self.nameBtnView setTitle:@"自拍\n面板" forState:UIControlStateNormal];
     self.batteryBtnView.titleLabel.numberOfLines = 0;
-    [self.batteryBtnView setTitle:@"电量\n80%" forState:UIControlStateNormal];
     self.boardSettingBtnView.titleLabel.numberOfLines = 0;
-    [self.boardSettingBtnView setTitle:@"面板\n设置" forState:UIControlStateNormal];
     self.baseSettingBtnView.titleLabel.numberOfLines = 0;
+    [self.boardSettingBtnView setTitle:@"防狼\n面板" forState:UIControlStateNormal];
     [self.baseSettingBtnView setTitle:@"基础\n设置" forState:UIControlStateNormal];
     [self rectMainImageView];
-    NSLog(@"test%d",-1%10);
 }
 -(void)rectMainImageView{
     self.mainImageView.userInteractionEnabled = true;
@@ -41,34 +40,9 @@
     
     [self.mainLeftView addGestureRecognizer:leftSwipe];
     [self.mainLeftView addGestureRecognizer:rightSwipe];
-    
-     /*
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePanFrom:)];
-    pan.delegate =self;
-    [self.mainLeftView addGestureRecognizer:pan];
-      */
-    
-}
--(void)handlePanFrom:(UIPanGestureRecognizer*)gesture{
-//    NSLog(@"%lf",[gesture translationInView:self.mainImageView].x);
-    int offset_x = (int)[gesture translationInView:self.mainLeftView].x;
-    if (offset_x % 2 == 0) {
-        int step_x = offset_x / 2;
-        NSLog(@"step***%d",step_x);
-        curPicIndex = (curPicIndex - step_x) % 24;
-        if (curPicIndex<0) {
-            curPicIndex = curPicIndex+24;
-        }
-        NSLog(@"--------*%d*-------",curPicIndex);
-        NSLog(@"picname===%@",[NSString stringWithFormat:@"0_%d",curPicIndex]);
-        
-        [self.mainImageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"0_%d",curPicIndex]]];
-        [gesture setTranslation:CGPointMake(0, 0) inView:self.mainLeftView];
-    }
 }
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer *)gesture{
     NSLog(@"%@",gesture);
-//    gesture.direction
     self.mainImageView.animationImages = [self makeannimationImagesWithDirection:gesture.direction];
     self.mainImageView.animationDuration = 0.5;
     self.mainImageView.animationRepeatCount = 1;
@@ -91,6 +65,8 @@
             }
         }
         curPicIndex=12;
+        panelState = PanelStateFront;
+        [self panelStateChanged];
         self.mainImageView.image = [UIImage imageNamed:@"0_12"];
     }else if(curPicIndex ==12){
         if (direction == UISwipeGestureRecognizerDirectionLeft) {
@@ -108,16 +84,36 @@
             }
         }
         curPicIndex = 0;
+        panelState = PanelStateBack;
+        [self panelStateChanged];
         self.mainImageView.image = [UIImage imageNamed:@"0_0"];
     }
     return imageArray;
 }
--(void)viewWillAppear:(BOOL)animated{
-    
+-(void)panelStateChanged{
+    [self.boardSettingBtnView setTitle:panelState==PanelStateFront?@"防狼\n面板":@"遥控\n面板" forState:UIControlStateNormal];
 }
+-(void)viewWillAppear:(BOOL)animated{
+    self.tabBarController.tabBar.hidden = false;
+}
+- (IBAction)batteryButtonClicked:(UIButton *)sender {
+    BatteryViewController *batteryVC = [[BatteryViewController alloc]init];
+    [self.navigationController pushViewController:batteryVC animated:YES];
+}
+
 - (IBAction)boardSettingBtn:(UIButton *)sender {
-    SettingViewController *setVC = [[SettingViewController alloc]init];
-    [self.navigationController pushViewController:setVC animated:YES];
+    /*
+    if(panelState == PanelStateFront){
+        AntiWolfViewController *antiWolfVC = [[AntiWolfViewController alloc]init];
+        [self.navigationController pushViewController:antiWolfVC animated:YES];
+    }else{
+        SettingViewController *settingVC = [[SettingViewController alloc]init];
+        [self.navigationController pushViewController:settingVC animated:YES];
+    }*/
+    BoardSettingViewController *settingVC = [[BoardSettingViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:settingVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (IBAction)baseSettingBtn:(UIButton *)sender {
@@ -126,21 +122,15 @@
 }
 
 - (IBAction)storeBtn:(UIButton *)sender {
+    MyCollectDeviceViewController *myCollectDeviceVC = [[MyCollectDeviceViewController alloc]init];
+    [self.navigationController pushViewController:myCollectDeviceVC animated:YES];
 }
 
 - (IBAction)kitBtn:(UIButton *)sender {
+    NothingViewController *nothingVC = [[NothingViewController alloc]init];
+    [self.navigationController pushViewController:nothingVC animated:YES];
 }
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end

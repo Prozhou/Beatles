@@ -15,4 +15,5 @@
 @property(nonatomic,strong)UILabel *titleLabel;
 @property(nonatomic,strong)UIImageView *imageView;
 @property(nonatomic,strong)UICollectionView *settingCollectionView;
+@property(nonatomic,strong)UIImageView *rightImageView;
 @end

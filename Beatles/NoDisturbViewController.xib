@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoDisturbViewController">
+            <connections>
+                <outlet property="mainScrollView" destination="yB6-6f-7UM" id="av5-45-hM0"/>
+                <outlet property="segmentControl" destination="wJZ-W1-ZJ7" id="XHh-uV-Alh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="yUQ-uB-PWD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wJZ-W1-ZJ7">
+                    <rect key="frame" x="94" y="30" width="187.5" height="29"/>
+                    <segments>
+                        <segment title="勿扰区域"/>
+                        <segment title="勿扰时段"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentControlValueChanged:" destination="-1" eventType="valueChanged" id="Jwu-3w-EIL"/>
+                    </connections>
+                </segmentedControl>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-6f-7UM">
+                    <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yB6-6f-7UM" firstAttribute="top" secondItem="wJZ-W1-ZJ7" secondAttribute="bottom" constant="10" id="PnU-zp-VrQ"/>
+                <constraint firstItem="wJZ-W1-ZJ7" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="ZxX-cq-EpF"/>
+                <constraint firstItem="wJZ-W1-ZJ7" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:2" id="hoW-Se-xGr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yB6-6f-7UM" secondAttribute="trailing" id="leD-5D-Atw"/>
+                <constraint firstItem="yB6-6f-7UM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qSQ-8G-v8I"/>
+                <constraint firstItem="wJZ-W1-ZJ7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="tqb-lP-oBF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yB6-6f-7UM" secondAttribute="bottom" id="uWb-Bk-QXZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>

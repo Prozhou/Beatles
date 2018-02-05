@@ -26,21 +26,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="荣誉历史" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSE-lq-3Ks">
-                        <rect key="frame" x="38" y="11" width="187.5" height="18"/>
+                        <rect key="frame" x="38" y="16" width="187.5" height="18"/>
                         <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
                         <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="右角" translatesAutoresizingMaskIntoConstraints="NO" id="lTJ-tA-stq">
-                        <rect key="frame" x="319" y="14.5" width="6" height="12"/>
+                        <rect key="frame" x="321" y="21.5" width="4" height="8"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="6" id="JUa-1v-QsN"/>
-                            <constraint firstAttribute="height" constant="12" id="TKe-16-FUX"/>
+                            <constraint firstAttribute="width" constant="4" id="JUa-1v-QsN"/>
+                            <constraint firstAttribute="height" constant="8" id="TKe-16-FUX"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MSE-lq-3Ks" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RQf-74-xOD"/>
+                    <constraint firstItem="MSE-lq-3Ks" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="5" id="RQf-74-xOD"/>
                     <constraint firstAttribute="trailing" secondItem="lTJ-tA-stq" secondAttribute="trailing" constant="50" id="jT3-FP-Fty"/>
                     <constraint firstItem="MSE-lq-3Ks" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:2" id="urv-Gd-hCI"/>
                     <constraint firstItem="lTJ-tA-stq" firstAttribute="centerY" secondItem="MSE-lq-3Ks" secondAttribute="centerY" id="vcK-v0-VzC"/>

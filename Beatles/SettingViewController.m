@@ -27,7 +27,7 @@
         _topView = [[UIView alloc]init];
         [self.view addSubview:_topView];
         [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(CGSizeMake(SCREENWIDTH, 280.0/1334*SCREENHEIGHT));
+            make.size.equalTo(CGSizeMake(SCREENWIDTH, 145.0/1334*SCREENHEIGHT));
             make.top.left.equalTo(self.view);
         }];
         self.titleLabel.backgroundColor = [UIColor clearColor];
@@ -39,12 +39,11 @@
         _titleLabel = [[UILabel alloc]init];
         _titleLabel.text=@"功能设置";
         _titleLabel.textAlignment = NSTextAlignmentLeft;
-        _titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:24];
+        _titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Normal" size:24];
         _titleLabel.textColor = KBLUE2;
         [_topView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.view.mas_centerX).offset(30);
-//            make.left.equalTo(_topView.mas_centerX);
+            make.left.equalTo(self.view.mas_centerX).offset(10);
             make.size.equalTo(CGSizeMake(SCREENWIDTH/2, 30));
             make.bottom.equalTo(_topView).offset(-10);
         }];
@@ -69,13 +68,14 @@
 -(UIImageView *)imageView{
     if (!_imageView) {
         _imageView = [[UIImageView alloc]init];
-        [_imageView setImage:[UIImage imageNamed:@"设置界面面板"]];
+        [_imageView setImage:[UIImage imageNamed:@"设置图片"]];
         [_leftView addSubview:_imageView];
         [_imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_leftView.mas_top).offset(20);
-            make.left.equalTo(_leftView.mas_left).offset(15);
-            make.right.equalTo(_leftView.mas_right).offset(-10);
-            make.height.equalTo(_imageView.mas_width).multipliedBy(600.0/338);
+//            make.left.equalTo(_leftView.mas_left).offset(30);
+            make.right.equalTo(_leftView.mas_right).offset(-25);
+            make.width.equalTo(_leftView.mas_width).multipliedBy(201.0/380);
+            make.height.equalTo(_imageView.mas_width).multipliedBy(544.0/201.0);
         }];
     }
     return _imageView;
@@ -91,6 +91,7 @@
             make.bottom.equalTo(self.view).offset(-49);
         }];
         [self.settingCollectionView setBackgroundColor:[UIColor clearColor]];
+        [self.rightImageView setBackgroundColor:[UIColor clearColor]];
     }
     return _rightView;
 }
@@ -108,12 +109,27 @@
         
         [_settingCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(_rightView.mas_top);
-            make.left.equalTo(_rightView.mas_left).offset(30);
+            make.left.equalTo(_rightView.mas_left).offset(10);
             make.right.equalTo(_rightView.mas_right).offset(-36);
             make.bottom.equalTo(_rightView.mas_bottom).offset(-50);
         }];
     }
     return _settingCollectionView;
+}
+/*临时填充图片*/
+-(UIImageView *)rightImageView{
+    if (!_rightImageView) {
+        _rightImageView = [[UIImageView alloc]init];
+        [_rightImageView setImage:[UIImage imageNamed:@"进度条"]];
+        [self.rightView addSubview:_rightImageView];
+        [_rightImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(_rightView.mas_left).offset(10);
+            make.bottom.equalTo(self.view.mas_bottom).offset(-120);
+            make.width.equalTo(_rightImageView.mas_height).multipliedBy(216.0/264);
+            make.width.equalTo(_rightView.mas_width).multipliedBy(220.0/370.0);
+        }];
+    }
+    return _rightImageView;
 }
 #pragma MARK-- UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -123,7 +139,7 @@
     NSArray *titleArray = @[@"大小尺寸",@"颜色",@"使用习惯",@"灯光",@"省电"];
     SettingItemTextCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"settingTextCellId" forIndexPath:indexPath];
     cell.titleLabel.text = titleArray[indexPath.row];
-    cell.titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Regular" size:15];
+    cell.titleLabel.font = [UIFont fontWithName:@"SourceHanSansCN-Normal" size:18];
     cell.titleLabel.textColor = KBLUE2;
     return cell;
 }
@@ -138,7 +154,7 @@
     return CGSizeMake(80, 50);
 }*/
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(_settingCollectionView.frame.size.width,35);
+    return CGSizeMake(_settingCollectionView.frame.size.width,40);
 }
 //- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 //{
@@ -177,20 +193,8 @@
             break;
     }
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

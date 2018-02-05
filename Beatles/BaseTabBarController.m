@@ -21,35 +21,43 @@
     [super viewDidLoad];
     self.tabBar.backgroundImage = [Tools imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
     
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"SourceHanSansCN-Normal" size:14.0f],NSFontAttributeName,nil] forState:UIControlStateNormal];
 //    LoginViewController *mineVC = [[LoginViewController alloc]init];
     
     MainViewController *mainVC = [[MainViewController alloc]init];
-//    mainVC.tabBarItem.title=@"设置";
+    mainVC.tabBarItem.title=@"铁甲虫";
+//    mainVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     
-    mainVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    mainVC.tabBarItem.image=[[UIImage imageNamed:@"铁甲虫标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    mainVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"铁甲虫标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    mainVC.tabBarItem.image=[[UIImage imageNamed:@"主页标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    mainVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"主页标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    KitViewController *kitVC = [[KitViewController alloc] init];
+    kitVC.tabBarItem.title=@"智能套件";
+    kitVC.tabBarItem.image=[[UIImage imageNamed:@"智能套件"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    kitVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"智能套件"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     
     MarketViewController *marketVC = [[MarketViewController alloc]init];
-    //    mainVC.tabBarItem.title=@"商城";
-    marketVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
-    marketVC.tabBarItem.image=[[UIImage imageNamed:@"商城标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    marketVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"商城标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    marketVC.tabBarItem.title=@"商城";
+//    marketVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    marketVC.tabBarItem.image=[[UIImage imageNamed:@"新商场标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    marketVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"新商场标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     MineViewController *mineVC = [[MineViewController alloc]init];
-    //    mainVC.tabBarItem.title=@"用户";
-    mineVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
-    mineVC.tabBarItem.image=[[UIImage imageNamed:@"用户标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    mineVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"用户标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    mineVC.tabBarItem.title=@"我的";
+//    mineVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    mineVC.tabBarItem.image=[[UIImage imageNamed:@"我的标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    mineVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"我的标"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     UINavigationController *mainNav = [[UINavigationController alloc]initWithRootViewController:mainVC];
     mainNav.navigationBar.hidden = YES;
+    UINavigationController *kitNav = [[UINavigationController alloc]initWithRootViewController:kitVC];
+    kitNav.navigationBar.hidden = YES;
     UINavigationController *marketNav = [[UINavigationController alloc]initWithRootViewController:marketVC];
     marketNav.navigationBar.hidden = YES;
     UINavigationController *mineNav = [[UINavigationController alloc]initWithRootViewController:mineVC];
     mineNav.navigationBar.hidden = YES;
-    self.viewControllers = @[mainNav,marketNav,mineNav];
+    self.viewControllers = @[mainNav,kitNav,marketNav,mineNav];
 }
 
 - (void)didReceiveMemoryWarning {

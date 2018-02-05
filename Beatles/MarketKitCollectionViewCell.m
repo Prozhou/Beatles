@@ -12,7 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [self.buyBtnView setGradientType:leftToRight fromColors:@[KPEACH,KLAKEBLUE]];
+
 }
 
 @end

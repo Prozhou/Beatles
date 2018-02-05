@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;
 @property(nonatomic,strong)UIButton *carButton;
 @property(nonatomic,strong)UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *buyBtnView;
+
 @end

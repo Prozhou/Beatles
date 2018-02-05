@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NothingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="脑洞" translatesAutoresizingMaskIntoConstraints="NO" id="Q04-b1-3lL">
+                    <rect key="frame" x="118.5" y="231.5" width="137" height="112"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Q04-b1-3lL" secondAttribute="height" multiplier="274:225" id="ATf-oo-XfD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="脑洞区域" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF7-iF-aEV">
+                    <rect key="frame" x="0.0" y="373.5" width="375" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="UUt-QO-MG7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
+                    <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="尚未开放" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-1g-iL8">
+                    <rect key="frame" x="0.0" y="403.5" width="375" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="P2W-Cb-WI2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
+                    <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cF7-iF-aEV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="3XP-yy-FXg"/>
+                <constraint firstItem="Q04-b1-3lL" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="90g-RJ-g3m"/>
+                <constraint firstItem="Fwr-1g-iL8" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="FoO-iM-qFc"/>
+                <constraint firstItem="Fwr-1g-iL8" firstAttribute="top" secondItem="cF7-iF-aEV" secondAttribute="bottom" constant="5" id="H5Q-hQ-lzA"/>
+                <constraint firstItem="cF7-iF-aEV" firstAttribute="top" secondItem="Q04-b1-3lL" secondAttribute="bottom" constant="30" id="LUU-YF-89q"/>
+                <constraint firstItem="Q04-b1-3lL" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="aKp-x8-3TG"/>
+                <constraint firstItem="Q04-b1-3lL" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" multiplier="274:750" id="mpm-iy-WpS"/>
+                <constraint firstItem="Fwr-1g-iL8" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ulO-pH-Ltr"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cF7-iF-aEV" secondAttribute="trailing" id="zyi-i5-Rjs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="54" y="24"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="脑洞" width="274" height="225"/>
+    </resources>
+</document>

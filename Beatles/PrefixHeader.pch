@@ -21,6 +21,13 @@
 #import "SettingViewController.h"
 #import "SettingLocalMapViewController.h"
 #import "MarketDetailViewController.h"
+#import "NoDisturbViewController.h"
+#import "AntiWolfViewController.h"
+#import "MyCollectDeviceViewController.h"
+#import "BatteryViewController.h"
+#import "NothingViewController.h"
+#import "BoardSettingViewController.h"
+#import "KitViewController.h"
 /*View*/
 #import "SettingItemTextCollectionViewCell.h"
 #import "MainCollectionViewCell.h"
@@ -33,6 +40,14 @@
 #import "MarketItemCollectionViewCell.h"
 #import "MarketDetailDescCollectionViewCell.h"
 #import "MarketKitCollectionViewCell.h"
+#import "NoDisturbSwitchTableViewCell.h"
+#import "NoDistrubContentTableViewCell.h"
+#import "NoDistrubAddTableViewCell.h"
+#import "NoDistrubHeaderFooterView.h"
+#import "AntiWolfCollectionViewCell.h"
+#import "MyCollectDeviceCollectionViewCell.h"
+#import "MIneHelpTableViewCell.h"
+#import "RecommandKitTableViewCell.h"
 /*model*/
 #import "ConfigDataTool.h"
 #import "MyDeviceDao.h"
@@ -41,13 +56,18 @@
 #import "Masonry.h"
 #import <CoreData/CoreData.h>
 /*macro*/
-#define BLUECOLOR [UIColor colorWithRed:72.0/255 green:156.0/255 blue:248.0/255 alpha:1]
 #define KBLUE [UIColor colorWithRed:3/255.0 green:39/255.0 blue:141/255.0 alpha:1]
 #define KBLUE2 [UIColor colorWithRed:21/255.0 green:37/255.0 blue:100/255.0 alpha:1]
 #define KBROWN [UIColor colorWithRed:245/255.0 green:90/255.0 blue:18/255.0 alpha:1]
 #define KGREY [UIColor colorWithRed:177/255.0 green:177/255.0 blue:177/255.0 alpha:1]
+#define KORANGE [UIColor colorWithRed:248/255.0 green:34/255.0 blue:23/255.0 alpha:1]
+#define KPEACH [UIColor colorWithRed:230/255.0 green:44/255.0 blue:99/255.0 alpha:1]
+#define KPEACHRED [UIColor colorWithRed:154/255.0 green:28/255.0 blue:124/255.0 alpha:1]
+#define KLAKEBLUE [UIColor colorWithRed:42/255.0 green:41/255.0 blue:98/255.0 alpha:1]
+#define KCYAN [UIColor colorWithRed:246/255.0 green:251/255.0 blue:250/255.0 alpha:1]
 #define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+
 /*CoreData*/
 #import "BaseDao.h"
 #import "ConfigDao.h"
@@ -60,6 +80,7 @@
 /*Other*/
 #import "Tools.h"
 #import "MyPageControl.h"
+#import "UIButton+Gradient.h"
 
 
 #endif /* PrefixHeader_pch */
