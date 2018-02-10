@@ -10,5 +10,6 @@
 
 @interface MineNormalTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
+@property (weak, nonatomic) IBOutlet UIImageView *smallImageView;
 
 @end

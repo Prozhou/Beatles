@@ -10,5 +10,5 @@
 
 @interface BaseSettingViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
-@property(nonatomic,strong)UIButton *backButton;
+@property(nonatomic,strong)UIButton *backBtn;
 @end

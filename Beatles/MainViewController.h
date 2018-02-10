@@ -17,16 +17,18 @@ typedef  NS_ENUM(NSInteger,PanelState){
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 
+@property (weak, nonatomic) IBOutlet UIView *signalView;
 @property (weak, nonatomic) IBOutlet UIButton *batteryBtnView;
+@property (weak, nonatomic) IBOutlet UIButton *nameBtnView;
+
 @property (weak, nonatomic) IBOutlet UIButton *boardSettingBtnView;
 @property (weak, nonatomic) IBOutlet UIButton *baseSettingBtnView;
 @property (weak, nonatomic) IBOutlet UIButton *storeBtnView;
-@property (weak, nonatomic) IBOutlet UIButton *kitBtnView;
+
 - (IBAction)batteryButtonClicked:(UIButton *)sender;
 
 - (IBAction)boardSettingBtn:(UIButton *)sender;
 - (IBAction)baseSettingBtn:(UIButton *)sender;
 - (IBAction)storeBtn:(UIButton *)sender;
-- (IBAction)kitBtn:(UIButton *)sender;
 
 @end

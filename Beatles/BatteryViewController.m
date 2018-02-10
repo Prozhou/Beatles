@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.backButton setBackgroundColor:[UIColor whiteColor]];
-    [self.bleStateBtnView setGradientType:leftToRight fromColors:@[KPEACH,KLAKEBLUE]];
+//    [self.bleStateBtnView setGradientType:leftToRight fromColors:@[KPEACH,KLAKEBLUE]];
     
     NSMutableAttributedString *typeStr = [[NSMutableAttributedString alloc] initWithString:@"75%"];
     [typeStr addAttribute:NSFontAttributeName
@@ -52,6 +51,7 @@
     
     
 }
+
 -(void)rectSingelImageView{
     NSMutableArray *imageArray = [NSMutableArray array];
     for (int i = 1; i<5; i++) {
@@ -62,37 +62,6 @@
     self.singleImageView.animationDuration = 1.5;
     self.singleImageView.animationRepeatCount = 0;
     [self.singleImageView startAnimating];
-}
--(UIButton *)backButton{
-    if (!_backButton) {
-        _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.view addSubview:_backButton];
-        //        [_backButton setImage:[UIImage imageNamed:@"返回"] forState:UIControlStateNormal];
-        [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self.view.mas_left).offset(38);
-            make.top.equalTo(self.view.mas_top).offset(40);
-            make.size.equalTo(CGSizeMake(45, 45));
-        }];
-        _backButton.layer.borderWidth = 0.5;
-        _backButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        _backButton.layer.shadowOpacity = 0.3f;
-        _backButton.layer.shadowOffset = CGSizeMake(1, 1);
-        _backButton.layer.shadowColor = [UIColor blackColor].CGColor;
-        _backButton.transform = CGAffineTransformRotate(_backButton.transform, M_PI / 4);
-        UIImageView *bgImgV = [[UIImageView alloc]init];
-        [bgImgV setImage:[UIImage imageNamed:@"返回"]];
-        [_backButton addSubview:bgImgV];
-        [bgImgV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.equalTo(CGSizeMake(20, 20));
-            make.center.equalTo(_backButton.center);
-            //            make.centerY.equalTo(_backButton.mas_centerY);
-            //            make.centerX.equalTo(_backButton.mas_centerX).offset(-8);
-        }];
-        bgImgV.transform = CGAffineTransformRotate(bgImgV.transform, - M_PI / 4);
-        [_backButton addTarget:self action:@selector(backToMarketMain) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    return _backButton;
 }
 -(void)backToMarketMain{
     [self.navigationController popViewControllerAnimated:YES];

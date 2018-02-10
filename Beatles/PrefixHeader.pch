@@ -28,6 +28,12 @@
 #import "NothingViewController.h"
 #import "BoardSettingViewController.h"
 #import "KitViewController.h"
+#import "V2MarketDetailViewController.h"
+#import "MineThreeBtnTableViewCell.h"
+#import "MyDeviceViewController.h"
+#import "SignalViewController.h"
+#import "DHDragableCellTableView.h"
+
 /*View*/
 #import "SettingItemTextCollectionViewCell.h"
 #import "MainCollectionViewCell.h"
@@ -46,8 +52,17 @@
 #import "NoDistrubHeaderFooterView.h"
 #import "AntiWolfCollectionViewCell.h"
 #import "MyCollectDeviceCollectionViewCell.h"
-#import "MIneHelpTableViewCell.h"
 #import "RecommandKitTableViewCell.h"
+#import "V2MarketViewController.h"
+#import "V2MarketCollectionViewCell.h"
+#import "V2MarketDetailTopTableViewCell.h"
+#import "V2MarketDetailNameTableViewCell.h"
+#import "SelectColorTableViewCell.h"
+#import "AdressTableViewCell.h"
+#import "V2MarketDetailQuesTitleTableViewCell.h"
+#import "V2MarketDetailAskTableViewCell.h"
+#import "V2MarketDetailRecommendTableViewCell.h"
+#import "MyDeviceItemCollectionViewCell.h"
 /*model*/
 #import "ConfigDataTool.h"
 #import "MyDeviceDao.h"
@@ -65,8 +80,13 @@
 #define KPEACHRED [UIColor colorWithRed:154/255.0 green:28/255.0 blue:124/255.0 alpha:1]
 #define KLAKEBLUE [UIColor colorWithRed:42/255.0 green:41/255.0 blue:98/255.0 alpha:1]
 #define KCYAN [UIColor colorWithRed:246/255.0 green:251/255.0 blue:250/255.0 alpha:1]
+#define KSEPGRAY [UIColor colorWithRed:126/255.0 green:126/255.0 blue:126/255.0 alpha:1]
+#define KTEXTGRAY [UIColor colorWithRed:116/255.0 green:116/255.0 blue:116/255.0 alpha:1]
 #define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define RGBA(A, B, C, D) [UIColor colorWithRed:A/255.0 green:B/255.0 blue:C/255.0 alpha:D/1.0]
+#define kAppDelegate [[UIApplication sharedApplication]delegate]
+#define KFONT(X) [UIFont fontWithName:@"SourceHanSansCN-Normal" size:X]
 
 /*CoreData*/
 #import "BaseDao.h"
@@ -81,6 +101,6 @@
 #import "Tools.h"
 #import "MyPageControl.h"
 #import "UIButton+Gradient.h"
-
+#import "RectLayer.h"
 
 #endif /* PrefixHeader_pch */

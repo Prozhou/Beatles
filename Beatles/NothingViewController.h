@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef  NS_ENUM(NSInteger,NoThingType){
+    NothingType1 = 0,
+    NothingType2
+};
 @interface NothingViewController : UIViewController
-@property(nonatomic,strong)UIButton *backButton;
+@property(nonatomic,assign)NoThingType *nothingType;
+@property(nonatomic,strong)UIButton *backBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *rabbitImage;
+@property (weak, nonatomic) IBOutlet UILabel *rabbitLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *manImageView;
+@property (weak, nonatomic) IBOutlet UILabel *manLabel;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSep;
+
 @end

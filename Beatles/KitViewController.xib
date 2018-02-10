@@ -30,39 +30,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQN-Xs-Atf">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtt-av-75f">
-                            <rect key="frame" x="187" y="60" width="0.5" height="30"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="187" y="48" width="0.5" height="20"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="0.5" id="Jz8-17-aws"/>
-                                <constraint firstAttribute="height" constant="30" id="m25-de-HsU"/>
+                                <constraint firstAttribute="height" constant="20" id="m25-de-HsU"/>
                             </constraints>
                         </view>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ma-em-EDj">
-                            <rect key="frame" x="217.5" y="50" width="96" height="50"/>
+                            <rect key="frame" x="217.5" y="30" width="84" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="biR-Mv-heK"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal" title="我的组合">
-                                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleColor" red="0.4549019608" green="0.4549019608" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrs-sn-cfu">
-                            <rect key="frame" x="61" y="50" width="96" height="50"/>
+                            <rect key="frame" x="73" y="30" width="84" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="lNo-6L-VS2"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
                             <state key="normal" title="推荐组合">
                                 <color key="titleColor" red="0.97254901959999995" green="0.1333333333" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjn-KQ-OB7">
-                            <rect key="frame" x="38" y="99.5" width="299" height="0.5"/>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="38" y="79.5" width="299" height="0.5"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="EKv-2m-M94"/>
                             </constraints>
@@ -77,11 +77,11 @@
                         <constraint firstAttribute="bottom" secondItem="bjn-KQ-OB7" secondAttribute="bottom" id="oOM-Ao-LUW"/>
                         <constraint firstAttribute="bottom" secondItem="9ma-em-EDj" secondAttribute="bottom" id="odh-ZS-d4g"/>
                         <constraint firstItem="9ma-em-EDj" firstAttribute="leading" secondItem="Xtt-av-75f" secondAttribute="trailing" constant="30" id="oh4-wA-b10"/>
-                        <constraint firstAttribute="bottom" secondItem="Xtt-av-75f" secondAttribute="bottom" constant="10" id="q9g-eb-eJ3"/>
+                        <constraint firstAttribute="bottom" secondItem="Xtt-av-75f" secondAttribute="bottom" constant="12" id="q9g-eb-eJ3"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQR-nw-btb">
-                    <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                    <rect key="frame" x="0.0" y="80" width="375" height="538"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="TXr-ne-GW4"/>
@@ -94,13 +94,13 @@
                 <constraint firstItem="fu4-95-agd" firstAttribute="trailing" secondItem="qQR-nw-btb" secondAttribute="trailing" id="1W2-Xf-OtE"/>
                 <constraint firstAttribute="bottom" secondItem="qQR-nw-btb" secondAttribute="bottom" constant="49" id="1cN-UF-Lpd"/>
                 <constraint firstItem="qQR-nw-btb" firstAttribute="top" secondItem="GQN-Xs-Atf" secondAttribute="bottom" id="1eY-j4-nhf"/>
-                <constraint firstItem="GQN-Xs-Atf" firstAttribute="height" secondItem="xFZ-B2-vHq" secondAttribute="height" multiplier="200:1334" id="ByC-Mw-sY7"/>
+                <constraint firstItem="GQN-Xs-Atf" firstAttribute="height" secondItem="xFZ-B2-vHq" secondAttribute="height" multiplier="160:1334" id="ByC-Mw-sY7"/>
                 <constraint firstItem="fu4-95-agd" firstAttribute="trailing" secondItem="GQN-Xs-Atf" secondAttribute="trailing" id="KSB-Rt-PQW"/>
                 <constraint firstItem="qQR-nw-btb" firstAttribute="leading" secondItem="fu4-95-agd" secondAttribute="leading" id="hY2-bp-6m6"/>
                 <constraint firstItem="GQN-Xs-Atf" firstAttribute="leading" secondItem="fu4-95-agd" secondAttribute="leading" id="s85-Jz-gpI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fu4-95-agd"/>
-            <point key="canvasLocation" x="-4" y="-110"/>
+            <point key="canvasLocation" x="-160" y="-191"/>
         </view>
     </objects>
 </document>

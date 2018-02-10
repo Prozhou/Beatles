@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,6 +19,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NothingViewController">
             <connections>
+                <outlet property="bottomSep" destination="9iT-6N-ELR" id="1z2-0E-DzD"/>
+                <outlet property="manImageView" destination="364-wh-maq" id="aCT-nZ-S49"/>
+                <outlet property="manLabel" destination="uXv-L8-o4e" id="o4i-xY-qMm"/>
+                <outlet property="rabbitImage" destination="qk0-YC-HKo" id="GZe-Uo-nBy"/>
+                <outlet property="rabbitLabel" destination="KMj-LX-Gn3" id="0Kf-gN-ODa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,48 +32,51 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="脑洞" translatesAutoresizingMaskIntoConstraints="NO" id="Q04-b1-3lL">
-                    <rect key="frame" x="118.5" y="231.5" width="137" height="112"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="探索中图标" translatesAutoresizingMaskIntoConstraints="NO" id="qk0-YC-HKo">
+                    <rect key="frame" x="65.5" y="103" width="244" height="564"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="Q04-b1-3lL" secondAttribute="height" multiplier="274:225" id="ATf-oo-XfD"/>
+                        <constraint firstAttribute="width" secondItem="qk0-YC-HKo" secondAttribute="height" multiplier="512:1180" id="Fm5-vF-vda"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="脑洞区域" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF7-iF-aEV">
-                    <rect key="frame" x="0.0" y="373.5" width="375" height="25"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="25" id="UUt-QO-MG7"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
-                    <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="探索开发中，敬请期待" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMj-LX-Gn3">
+                    <rect key="frame" x="103" y="510" width="170" height="17"/>
+                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="尚未开放" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwr-1g-iL8">
-                    <rect key="frame" x="0.0" y="403.5" width="375" height="25"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="宇航员" translatesAutoresizingMaskIntoConstraints="NO" id="364-wh-maq">
+                    <rect key="frame" x="102.5" y="248.5" width="170" height="190"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="P2W-Cb-WI2"/>
+                        <constraint firstAttribute="width" secondItem="364-wh-maq" secondAttribute="height" multiplier="340:380" id="jRe-wo-lVC"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="24"/>
-                    <color key="textColor" red="0.01176470588" green="0.1529411765" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这里很空旷，没有发现生命体" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXv-L8-o4e">
+                    <rect key="frame" x="0.0" y="440.5" width="375" height="18"/>
+                    <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cF7-iF-aEV" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="3XP-yy-FXg"/>
-                <constraint firstItem="Q04-b1-3lL" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="90g-RJ-g3m"/>
-                <constraint firstItem="Fwr-1g-iL8" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="FoO-iM-qFc"/>
-                <constraint firstItem="Fwr-1g-iL8" firstAttribute="top" secondItem="cF7-iF-aEV" secondAttribute="bottom" constant="5" id="H5Q-hQ-lzA"/>
-                <constraint firstItem="cF7-iF-aEV" firstAttribute="top" secondItem="Q04-b1-3lL" secondAttribute="bottom" constant="30" id="LUU-YF-89q"/>
-                <constraint firstItem="Q04-b1-3lL" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="aKp-x8-3TG"/>
-                <constraint firstItem="Q04-b1-3lL" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" multiplier="274:750" id="mpm-iy-WpS"/>
-                <constraint firstItem="Fwr-1g-iL8" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ulO-pH-Ltr"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cF7-iF-aEV" secondAttribute="trailing" id="zyi-i5-Rjs"/>
+                <constraint firstItem="uXv-L8-o4e" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="1f1-sc-uvd"/>
+                <constraint firstAttribute="bottom" secondItem="qk0-YC-HKo" secondAttribute="bottom" id="9iT-6N-ELR"/>
+                <constraint firstItem="qk0-YC-HKo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1128:1334" id="Cdp-8O-pb1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="KMj-LX-Gn3" secondAttribute="bottom" constant="140" id="NNG-hK-aoh"/>
+                <constraint firstItem="qk0-YC-HKo" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Z0n-aD-eU5"/>
+                <constraint firstItem="uXv-L8-o4e" firstAttribute="bottom" secondItem="364-wh-maq" secondAttribute="bottom" constant="20" id="bUX-Mv-Svi"/>
+                <constraint firstItem="364-wh-maq" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="dS2-b0-nE8"/>
+                <constraint firstItem="364-wh-maq" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="gFt-ul-Oyz"/>
+                <constraint firstItem="KMj-LX-Gn3" firstAttribute="centerX" secondItem="qk0-YC-HKo" secondAttribute="centerX" id="nQg-Cb-mX4"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="uXv-L8-o4e" secondAttribute="trailing" id="rTf-XG-8rt"/>
+                <constraint firstItem="364-wh-maq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="340:750" id="vFv-Dc-A0b"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="54" y="24"/>
+            <point key="canvasLocation" x="-225.5" y="41.5"/>
         </view>
     </objects>
     <resources>
-        <image name="脑洞" width="274" height="225"/>
+        <image name="宇航员" width="339" height="380"/>
+        <image name="探索中图标" width="511" height="1179"/>
     </resources>
 </document>

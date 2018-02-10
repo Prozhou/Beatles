@@ -15,5 +15,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *singleImageView;
-@property(nonatomic,strong)UIButton *backButton;
 @end

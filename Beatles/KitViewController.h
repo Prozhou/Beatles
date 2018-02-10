@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property(nonatomic,strong)UITableView *recommendTableView;
 @property(nonatomic,strong)UITableView *myTableView;
+@property(nonatomic,strong)NothingViewController *nothingVC;
+@property(nonatomic,strong)UIButton *backBtn;
 @end

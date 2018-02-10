@@ -72,7 +72,7 @@
         if (sender.tag == btn.tag) {
             [btn setTitleColor:KORANGE forState:UIControlStateNormal];
         }else{
-            [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            [btn setTitleColor:KTEXTGRAY forState:UIControlStateNormal];
         }
     }
     [self.mainScrollView scrollRectToVisible:CGRectMake(SCREENWIDTH *sender.tag, 0, SCREENWIDTH, self.mainScrollView.frame.size.height) animated:YES];
@@ -82,7 +82,7 @@
         if (btn.tag == scrollView.contentOffset.x/SCREENWIDTH) {
             [btn setTitleColor:KORANGE forState:UIControlStateNormal];
         }else{
-            [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+            [btn setTitleColor:KTEXTGRAY forState:UIControlStateNormal];
         }
     }
 }

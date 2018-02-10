@@ -18,7 +18,7 @@
         _titleLabel.text = @"大小尺寸";
         [self addSubview:_titleLabel];
         UIView *baselineView = [[UIView alloc]initWithFrame:CGRectMake(0, 34, frame.size.width, 1)];
-        baselineView.backgroundColor = [UIColor colorWithRed:230.0/255 green:230.0/255 blue:230.0/255 alpha:1];
+        baselineView.backgroundColor = KSEPGRAY;
         [self addSubview:baselineView];
         UIImageView *rightImageView = [[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-20, 13, 8, 7)];
         rightImageView.image = [UIImage imageNamed:@"小钩"];

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MineThreeBtnTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="52.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tx-Fl-rJS">
+                        <rect key="frame" x="138" y="0.0" width="99" height="52.5"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="15"/>
+                        <state key="normal" title="我的收藏">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llv-Cq-9ru">
+                        <rect key="frame" x="38" y="0.0" width="99" height="52.5"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="15"/>
+                        <state key="normal" title="桌面小组件">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxU-hg-q4T">
+                        <rect key="frame" x="238" y="0.0" width="99" height="53"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="15"/>
+                        <state key="normal" title="共享设备">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-vA-fbw">
+                        <rect key="frame" x="137" y="19.5" width="1" height="20"/>
+                        <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="OOE-yH-PEq"/>
+                            <constraint firstAttribute="height" constant="20" id="fnP-cK-eUn"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwE-VP-Qv8">
+                        <rect key="frame" x="237" y="19.5" width="1" height="20"/>
+                        <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="03p-w1-ggV"/>
+                            <constraint firstAttribute="width" constant="0.5" id="Aw1-fx-hYL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9tx-Fl-rJS" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="0BW-PI-9py"/>
+                    <constraint firstItem="EwE-VP-Qv8" firstAttribute="leading" secondItem="9tx-Fl-rJS" secondAttribute="trailing" id="0bE-4w-BGk"/>
+                    <constraint firstItem="9tx-Fl-rJS" firstAttribute="leading" secondItem="OYQ-vA-fbw" secondAttribute="trailing" id="1g1-Ig-4xY"/>
+                    <constraint firstAttribute="bottom" secondItem="OYQ-vA-fbw" secondAttribute="bottom" constant="13" id="5Uj-OH-FIr"/>
+                    <constraint firstAttribute="bottom" secondItem="9tx-Fl-rJS" secondAttribute="bottom" id="5aj-y3-Ubk"/>
+                    <constraint firstItem="llv-Cq-9ru" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="Cae-Cg-yAj"/>
+                    <constraint firstItem="9tx-Fl-rJS" firstAttribute="width" secondItem="llv-Cq-9ru" secondAttribute="width" id="FfE-gD-QmH"/>
+                    <constraint firstItem="OYQ-vA-fbw" firstAttribute="leading" secondItem="llv-Cq-9ru" secondAttribute="trailing" id="Tip-Z8-WgK"/>
+                    <constraint firstItem="9tx-Fl-rJS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Yi3-bK-1tV"/>
+                    <constraint firstAttribute="bottom" secondItem="EwE-VP-Qv8" secondAttribute="bottom" constant="13" id="Yy7-yw-1Fd"/>
+                    <constraint firstItem="kxU-hg-q4T" firstAttribute="width" secondItem="llv-Cq-9ru" secondAttribute="width" id="cG3-LH-18S"/>
+                    <constraint firstAttribute="bottom" secondItem="kxU-hg-q4T" secondAttribute="bottom" id="eH8-Uf-iqB"/>
+                    <constraint firstItem="llv-Cq-9ru" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hwI-UZ-Qqb"/>
+                    <constraint firstItem="kxU-hg-q4T" firstAttribute="leading" secondItem="EwE-VP-Qv8" secondAttribute="trailing" id="jSo-b5-IzA"/>
+                    <constraint firstAttribute="trailing" secondItem="kxU-hg-q4T" secondAttribute="trailing" constant="38" id="oUc-a8-CXd"/>
+                    <constraint firstAttribute="bottom" secondItem="llv-Cq-9ru" secondAttribute="bottom" id="rep-3T-HRq"/>
+                    <constraint firstItem="kxU-hg-q4T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uql-MS-tgw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="67.5" y="50.5"/>
+        </tableViewCell>
+    </objects>
+</document>

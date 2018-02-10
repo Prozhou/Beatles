@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="V2MarketDetailRecommendTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="313"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="312.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynw-sh-d9X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相关套件推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y3-jJ-K9Y">
+                                <rect key="frame" x="38" y="16.5" width="108.5" height="18"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5Y3-jJ-K9Y" firstAttribute="centerY" secondItem="ynw-sh-d9X" secondAttribute="centerY" id="39e-zH-Ie9"/>
+                            <constraint firstItem="5Y3-jJ-K9Y" firstAttribute="leading" secondItem="ynw-sh-d9X" secondAttribute="leading" constant="38" id="BvA-PE-36F"/>
+                            <constraint firstAttribute="height" constant="50" id="o2a-Dc-opQ"/>
+                        </constraints>
+                    </view>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81g-Nl-vud">
+                        <rect key="frame" x="0.0" y="50" width="375" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="p0C-2L-1HT"/>
+                        </constraints>
+                    </scrollView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="NuN-wW-M1Q" customClass="MyPageControl">
+                        <rect key="frame" x="162.5" y="210" width="50" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="FE5-O6-ldr"/>
+                            <constraint firstAttribute="width" constant="50" id="i2w-J9-h45"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="currentPageIndicatorTintColor" red="0.96078431369999995" green="0.35294117650000001" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </pageControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上拉查看图文详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-px-cMf">
+                        <rect key="frame" x="127" y="272.5" width="120" height="15"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="上拉图标" translatesAutoresizingMaskIntoConstraints="NO" id="QJ6-On-KKp">
+                        <rect key="frame" x="179" y="254.5" width="16" height="8"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="a41-dj-7Uf"/>
+                            <constraint firstAttribute="height" constant="8" id="fLe-0f-kyX"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QJ6-On-KKp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="6Qc-0A-WHS"/>
+                    <constraint firstItem="81g-Nl-vud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IHf-ua-7Lh"/>
+                    <constraint firstItem="xPc-px-cMf" firstAttribute="top" secondItem="QJ6-On-KKp" secondAttribute="bottom" constant="10" id="ODt-1y-sNm"/>
+                    <constraint firstItem="ynw-sh-d9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Pjl-m1-Gpw"/>
+                    <constraint firstAttribute="bottom" secondItem="xPc-px-cMf" secondAttribute="bottom" constant="25" id="Ug7-Hs-vri"/>
+                    <constraint firstItem="81g-Nl-vud" firstAttribute="top" secondItem="ynw-sh-d9X" secondAttribute="bottom" id="WXF-Q5-3mT"/>
+                    <constraint firstItem="NuN-wW-M1Q" firstAttribute="top" secondItem="81g-Nl-vud" secondAttribute="bottom" constant="10" id="e7K-Ix-dK9"/>
+                    <constraint firstAttribute="trailing" secondItem="81g-Nl-vud" secondAttribute="trailing" id="mty-I3-7in"/>
+                    <constraint firstAttribute="trailing" secondItem="ynw-sh-d9X" secondAttribute="trailing" id="onV-GH-s3X"/>
+                    <constraint firstItem="xPc-px-cMf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="qmh-66-8U6"/>
+                    <constraint firstItem="ynw-sh-d9X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="uJ3-R2-W1x"/>
+                    <constraint firstItem="NuN-wW-M1Q" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yxw-j2-hwl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="mainScrollView" destination="81g-Nl-vud" id="dKc-vx-eg4"/>
+            </connections>
+            <point key="canvasLocation" x="-57" y="-12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="上拉图标" width="32" height="16"/>
+    </resources>
+</document>

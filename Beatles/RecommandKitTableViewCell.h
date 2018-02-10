@@ -11,5 +11,6 @@
 @interface RecommandKitTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellWidth;
 
 @end

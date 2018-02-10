@@ -27,31 +27,45 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="国际旅行" translatesAutoresizingMaskIntoConstraints="NO" id="Qk3-ry-QGa">
                         <rect key="frame" x="5" y="5" width="365" height="154.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国际旅行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-Rp-vci">
-                        <rect key="frame" x="35" y="20" width="84" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="文字打底" translatesAutoresizingMaskIntoConstraints="NO" id="GQi-Bv-aAg">
+                        <rect key="frame" x="0.0" y="20" width="84" height="26"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="国际旅行 " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-Rp-vci">
+                        <rect key="frame" x="0.0" y="20" width="84" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="Dj0-QY-A5x"/>
+                            <constraint firstAttribute="height" constant="26" id="tqd-ia-4X6"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="ZCZ-Rp-vci" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="D1k-dR-BeW"/>
+                    <constraint firstItem="ZCZ-Rp-vci" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="D1k-dR-BeW"/>
+                    <constraint firstItem="GQi-Bv-aAg" firstAttribute="trailing" secondItem="ZCZ-Rp-vci" secondAttribute="trailing" id="FaI-Gu-QTU"/>
+                    <constraint firstItem="GQi-Bv-aAg" firstAttribute="leading" secondItem="ZCZ-Rp-vci" secondAttribute="leading" id="Khb-pE-5aX"/>
+                    <constraint firstItem="GQi-Bv-aAg" firstAttribute="top" secondItem="ZCZ-Rp-vci" secondAttribute="top" id="Ne0-ik-g13"/>
                     <constraint firstAttribute="bottom" secondItem="Qk3-ry-QGa" secondAttribute="bottom" id="Y1t-JQ-tbT"/>
                     <constraint firstItem="Qk3-ry-QGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="byD-0Z-DmL"/>
                     <constraint firstItem="Qk3-ry-QGa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="fZP-KY-DPe"/>
+                    <constraint firstItem="GQi-Bv-aAg" firstAttribute="bottom" secondItem="ZCZ-Rp-vci" secondAttribute="bottom" id="iFC-gw-43g"/>
                     <constraint firstAttribute="trailing" secondItem="Qk3-ry-QGa" secondAttribute="trailing" constant="5" id="obE-sR-Ukl"/>
                     <constraint firstItem="ZCZ-Rp-vci" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="sWH-aj-8w1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="cellWidth" destination="Dj0-QY-A5x" id="RS5-eM-lkt"/>
                 <outlet property="mainImageView" destination="Qk3-ry-QGa" id="EdY-2E-ZZz"/>
                 <outlet property="titleLabel" destination="ZCZ-Rp-vci" id="dt2-Ve-sre"/>
             </connections>
-            <point key="canvasLocation" x="-166" y="-98"/>
+            <point key="canvasLocation" x="-134" y="-175"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="国际旅行" width="713" height="295"/>
+        <image name="文字打底" width="268" height="68"/>
     </resources>
 </document>

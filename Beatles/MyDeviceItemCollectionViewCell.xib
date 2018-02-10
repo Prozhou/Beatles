@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyDeviceItemCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="设备1" translatesAutoresizingMaskIntoConstraints="NO" id="4kV-zP-hV3">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="135"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备运作正常" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwo-SX-5PB">
+                        <rect key="frame" x="9" y="120" width="104" height="10"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="10"/>
+                        <color key="textColor" red="0.97254901959999995" green="0.1333333333" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遥控器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qh-lb-OOH">
+                        <rect key="frame" x="9" y="105" width="104" height="13"/>
+                        <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="vwo-SX-5PB" secondAttribute="bottom" constant="5" id="3sq-RB-Ee0"/>
+                <constraint firstItem="9qh-lb-OOH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="9" id="BK0-5i-WdW"/>
+                <constraint firstAttribute="trailing" secondItem="vwo-SX-5PB" secondAttribute="trailing" constant="5" id="COv-QO-Tox"/>
+                <constraint firstAttribute="bottom" secondItem="4kV-zP-hV3" secondAttribute="bottom" id="HWl-PV-Pg2"/>
+                <constraint firstItem="vwo-SX-5PB" firstAttribute="top" secondItem="9qh-lb-OOH" secondAttribute="bottom" constant="2" id="L4D-R0-cp2"/>
+                <constraint firstAttribute="trailing" secondItem="9qh-lb-OOH" secondAttribute="trailing" constant="5" id="OjS-EG-oni"/>
+                <constraint firstItem="4kV-zP-hV3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="doA-uW-Sew"/>
+                <constraint firstItem="vwo-SX-5PB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="9" id="e9A-dD-obh"/>
+                <constraint firstAttribute="trailing" secondItem="4kV-zP-hV3" secondAttribute="trailing" id="gDp-sg-BXl"/>
+                <constraint firstItem="4kV-zP-hV3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="liH-Fj-AqR"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="178" height="192"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                    <color key="value" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <real key="value" value="0.5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="nameLabel" destination="9qh-lb-OOH" id="nI6-hi-9Hb"/>
+                <outlet property="proImageView" destination="4kV-zP-hV3" id="gWJ-bc-dQP"/>
+                <outlet property="stateLabel" destination="vwo-SX-5PB" id="LJF-gG-KB5"/>
+            </connections>
+            <point key="canvasLocation" x="-4" y="145"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="设备1" width="235" height="269"/>
+    </resources>
+</document>

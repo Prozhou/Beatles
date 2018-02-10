@@ -25,10 +25,42 @@
     self.batteryBtnView.titleLabel.numberOfLines = 0;
     self.boardSettingBtnView.titleLabel.numberOfLines = 0;
     self.baseSettingBtnView.titleLabel.numberOfLines = 0;
-    [self.boardSettingBtnView setTitle:@"防狼\n面板" forState:UIControlStateNormal];
+    self.storeBtnView.titleLabel.numberOfLines = 0;
+    [self.boardSettingBtnView setTitle:@"面板\n设置" forState:UIControlStateNormal];
     [self.baseSettingBtnView setTitle:@"基础\n设置" forState:UIControlStateNormal];
+    [self.storeBtnView setTitle:@"我的\n设备" forState:UIControlStateNormal];
     [self rectMainImageView];
+    
+    [self.batteryBtnView addTarget:self action:@selector(btnAnimation:) forControlEvents:UIControlEventTouchDown];
+    
+    
+    
+    /************************/
+    //1.创建自定义的layer
+    RectLayer *layer=[RectLayer layer];
+    //2.设置layer的属性
+    layer.backgroundColor= [UIColor clearColor].CGColor;
+    layer.frame=self.signalView.frame;
+    [layer setNeedsDisplay];
+    //3.添加layer
+    [self.signalView.layer addSublayer:layer];
+    /************************/
+    
 }
+-(void)btnAnimation:(UIButton *)sender{
+//    NSLog(@"touchdown");
+//    CABasicAnimation *scale = [CABasicAnimation animation];
+//    scale.duration = .2;
+//    scale.keyPath = @"transform.scale";
+//    scale.toValue = @(0.8);
+//    [sender.layer addAnimation:scale forKey:nil];
+    CAKeyframeAnimation *ani = [CAKeyframeAnimation animation];
+    ani.keyPath = @"transform.scale";
+    ani.values = @[@(0.8),@(1.0)];
+    ani.duration = 0.3;
+    [sender.layer addAnimation:ani forKey:nil];
+}
+
 -(void)rectMainImageView{
     self.mainImageView.userInteractionEnabled = true;
     
@@ -91,14 +123,18 @@
     return imageArray;
 }
 -(void)panelStateChanged{
-    [self.boardSettingBtnView setTitle:panelState==PanelStateFront?@"防狼\n面板":@"遥控\n面板" forState:UIControlStateNormal];
+    [self.nameBtnView setTitle:panelState==PanelStateFront?@"遥控":@"防狼" forState:UIControlStateNormal];
 }
 -(void)viewWillAppear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = false;
 }
+
 - (IBAction)batteryButtonClicked:(UIButton *)sender {
     BatteryViewController *batteryVC = [[BatteryViewController alloc]init];
-    [self.navigationController pushViewController:batteryVC animated:YES];
+    SignalViewController *singleVC = [[SignalViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:singleVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (IBAction)boardSettingBtn:(UIButton *)sender {
@@ -118,18 +154,19 @@
 
 - (IBAction)baseSettingBtn:(UIButton *)sender {
     BaseSettingViewController *baseSetting = [[BaseSettingViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:baseSetting animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
 - (IBAction)storeBtn:(UIButton *)sender {
-    MyCollectDeviceViewController *myCollectDeviceVC = [[MyCollectDeviceViewController alloc]init];
-    [self.navigationController pushViewController:myCollectDeviceVC animated:YES];
+//    MyCollectDeviceViewController *myCollectDeviceVC = [[MyCollectDeviceViewController alloc]init];
+    MyDeviceViewController *myDeviceVC = [[MyDeviceViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:myDeviceVC animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 
-- (IBAction)kitBtn:(UIButton *)sender {
-    NothingViewController *nothingVC = [[NothingViewController alloc]init];
-    [self.navigationController pushViewController:nothingVC animated:YES];
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

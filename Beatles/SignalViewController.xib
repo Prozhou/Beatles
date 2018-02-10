@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceHanSansCN-Normal.otf">
+            <string>SourceHanSansCN-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignalViewController">
+            <connections>
+                <outlet property="mainScrollView" destination="43h-LD-5MU" id="NqH-Fq-DsP"/>
+                <outlet property="view" destination="zjC-9n-XX8" id="obs-zL-NBx"/>
+                <outletCollection property="titleButtonArray" destination="ZcJ-cN-lFf" id="Rqm-gf-enV"/>
+                <outletCollection property="titleButtonArray" destination="Mf2-Kc-8nt" id="i2P-Ms-gtS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zjC-9n-XX8">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS8-mf-M3Q">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FYS-WK-M1J">
+                            <rect key="frame" x="187" y="45" width="0.5" height="20"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="0.5" id="hwv-hg-Dxs"/>
+                                <constraint firstAttribute="height" constant="20" id="uYi-o0-yug"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mf2-Kc-8nt">
+                            <rect key="frame" x="217.5" y="30" width="84" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="9SD-LF-z1p"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
+                            <state key="normal" title="其他信号">
+                                <color key="titleColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-cN-lFf">
+                            <rect key="frame" x="73" y="30" width="84" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="KmY-BY-rZY"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SourceHanSansCN-Normal" family="Source Han Sans CN" pointSize="21"/>
+                            <state key="normal" title="蓝牙信号">
+                                <color key="titleColor" red="0.97254901959999995" green="0.1333333333" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uM2-2o-sVW">
+                            <rect key="frame" x="38" y="79.5" width="299" height="0.5"/>
+                            <color key="backgroundColor" red="0.4941176471" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="3AG-od-kpO"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Mf2-Kc-8nt" secondAttribute="bottom" id="8Qz-K7-LNH"/>
+                        <constraint firstItem="FYS-WK-M1J" firstAttribute="leading" secondItem="ZcJ-cN-lFf" secondAttribute="trailing" constant="30" id="A7V-Jh-vgf"/>
+                        <constraint firstItem="FYS-WK-M1J" firstAttribute="centerX" secondItem="gS8-mf-M3Q" secondAttribute="centerX" id="CLt-cr-8Ly"/>
+                        <constraint firstAttribute="bottom" secondItem="ZcJ-cN-lFf" secondAttribute="bottom" id="GRX-t3-uPR"/>
+                        <constraint firstAttribute="bottom" secondItem="FYS-WK-M1J" secondAttribute="bottom" constant="15" id="OAV-ga-XDe"/>
+                        <constraint firstAttribute="bottom" secondItem="uM2-2o-sVW" secondAttribute="bottom" id="QQK-Fp-oGY"/>
+                        <constraint firstItem="uM2-2o-sVW" firstAttribute="leading" secondItem="gS8-mf-M3Q" secondAttribute="leading" constant="38" id="g4S-mw-Azm"/>
+                        <constraint firstItem="Mf2-Kc-8nt" firstAttribute="leading" secondItem="FYS-WK-M1J" secondAttribute="trailing" constant="30" id="gCq-Gt-Jun"/>
+                        <constraint firstAttribute="trailing" secondItem="uM2-2o-sVW" secondAttribute="trailing" constant="38" id="sYw-Uz-W1R"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43h-LD-5MU">
+                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ikt-JY-F3g" firstAttribute="bottom" secondItem="43h-LD-5MU" secondAttribute="bottom" id="BrE-3v-7Nr"/>
+                <constraint firstItem="43h-LD-5MU" firstAttribute="leading" secondItem="Ikt-JY-F3g" secondAttribute="leading" id="KgR-pG-XeQ"/>
+                <constraint firstItem="gS8-mf-M3Q" firstAttribute="height" secondItem="zjC-9n-XX8" secondAttribute="height" multiplier="160:1334" id="Mui-4b-6G1"/>
+                <constraint firstItem="gS8-mf-M3Q" firstAttribute="top" secondItem="zjC-9n-XX8" secondAttribute="top" id="abV-Om-70B"/>
+                <constraint firstItem="Ikt-JY-F3g" firstAttribute="trailing" secondItem="43h-LD-5MU" secondAttribute="trailing" id="ebZ-3S-6Ba"/>
+                <constraint firstItem="gS8-mf-M3Q" firstAttribute="leading" secondItem="Ikt-JY-F3g" secondAttribute="leading" id="nbp-wC-nla"/>
+                <constraint firstItem="43h-LD-5MU" firstAttribute="top" secondItem="gS8-mf-M3Q" secondAttribute="bottom" id="oxK-Us-J37"/>
+                <constraint firstItem="Ikt-JY-F3g" firstAttribute="trailing" secondItem="gS8-mf-M3Q" secondAttribute="trailing" id="zPB-dj-2Mm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Ikt-JY-F3g"/>
+            <point key="canvasLocation" x="-4" y="-110"/>
+        </view>
+    </objects>
+</document>

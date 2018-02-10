@@ -114,7 +114,7 @@
         if (label.tag == sender.tag) {
             label.textColor = KORANGE;
         }else {
-            label.textColor = [UIColor darkGrayColor];
+            label.textColor = KTEXTGRAY;
         }
     }
 }
